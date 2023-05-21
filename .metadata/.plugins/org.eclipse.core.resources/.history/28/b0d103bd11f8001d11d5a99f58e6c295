@@ -1,0 +1,20 @@
+/*
+ * Gpt.h
+ *
+ *  Created on: May 21, 2023
+ *      Author: I1bra
+ */
+
+#ifndef GPT_H_
+#define GPT_H_
+
+#include "Std_Types.h"
+
+void GPIO_Init(void);
+void GPIO_WritePinValue(unsigned char PinId, unsigned char PinData);
+unsigned char GPIO_ReadPinState(unsigned char PinId);
+
+
+
+
+#endif /* GPT_H_ */
