@@ -117,6 +117,26 @@ Discarded input sections
  .text          0x00000000        0x0 ./system/src/cmsis/vectors_stm32f401xe.o
  .data          0x00000000        0x0 ./system/src/cmsis/vectors_stm32f401xe.o
  .bss           0x00000000        0x0 ./system/src/cmsis/vectors_stm32f401xe.o
+ .text          0x00000000        0x0 ./src/helpers.o
+ .data          0x00000000        0x0 ./src/helpers.o
+ .bss           0x00000000        0x0 ./src/helpers.o
+ .text.unlockDoor
+                0x00000000       0x38 ./src/helpers.o
+ .text.lockDoor
+                0x00000000       0x2e ./src/helpers.o
+ .text.blinkHazardLights
+                0x00000000       0x5e ./src/helpers.o
+ .debug_info    0x00000000      0x109 ./src/helpers.o
+ .debug_abbrev  0x00000000       0xad ./src/helpers.o
+ .debug_aranges
+                0x00000000       0x30 ./src/helpers.o
+ .debug_ranges  0x00000000       0x20 ./src/helpers.o
+ .debug_line    0x00000000      0x11c ./src/helpers.o
+ .debug_str     0x00000000      0x1ef ./src/helpers.o
+ .comment       0x00000000       0x4a ./src/helpers.o
+ .debug_frame   0x00000000       0x7c ./src/helpers.o
+ .ARM.attributes
+                0x00000000       0x2e ./src/helpers.o
  .text          0x00000000        0x0 ./src/main.o
  .data          0x00000000        0x0 ./src/main.o
  .bss           0x00000000        0x0 ./src/main.o
@@ -207,6 +227,7 @@ LOAD ./system/src/cortexm/initialize-hardware.o
 LOAD ./system/src/cortexm/reset-hardware.o
 LOAD ./system/src/cmsis/system_stm32f4xx.o
 LOAD ./system/src/cmsis/vectors_stm32f401xe.o
+LOAD ./src/helpers.o
 LOAD ./src/main.o
 LOAD ./Rcc/Rcc.o
 LOAD ./Gpio/Gpio.o
@@ -587,7 +608,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x143a
+.debug_info     0x00000000     0x1480
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0xd5 ./system/src/newlib/exit.o
  .debug_info    0x000000d5      0x3fc ./system/src/newlib/startup.o
@@ -597,9 +618,9 @@ END GROUP
  .debug_info    0x00000b67      0x29a ./system/src/cortexm/reset-hardware.o
  .debug_info    0x00000e01      0x52c ./system/src/cmsis/system_stm32f4xx.o
  .debug_info    0x0000132d       0xca ./system/src/cmsis/vectors_stm32f401xe.o
- .debug_info    0x000013f7       0x43 ./src/main.o
+ .debug_info    0x000013f7       0x89 ./src/main.o
 
-.debug_abbrev   0x00000000      0x789
+.debug_abbrev   0x00000000      0x794
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0xab ./system/src/newlib/exit.o
  .debug_abbrev  0x000000ab      0x15c ./system/src/newlib/startup.o
@@ -609,7 +630,7 @@ END GROUP
  .debug_abbrev  0x000004a4       0xf5 ./system/src/cortexm/reset-hardware.o
  .debug_abbrev  0x00000599      0x113 ./system/src/cmsis/system_stm32f4xx.o
  .debug_abbrev  0x000006ac       0xa2 ./system/src/cmsis/vectors_stm32f401xe.o
- .debug_abbrev  0x0000074e       0x3b ./src/main.o
+ .debug_abbrev  0x0000074e       0x46 ./src/main.o
 
 .debug_line     0x00000000      0xa5f
  *(.debug_line)
@@ -635,7 +656,7 @@ END GROUP
  .debug_frame   0x000003b8       0x28 ./system/src/cmsis/vectors_stm32f401xe.o
  .debug_frame   0x000003e0       0x30 ./src/main.o
 
-.debug_str      0x00000000      0x7a8
+.debug_str      0x00000000      0x7ae
  *(.debug_str)
  .debug_str     0x00000000      0x197 ./system/src/newlib/exit.o
                                 0x1d0 (size before relaxing)
@@ -653,8 +674,8 @@ END GROUP
                                 0x389 (size before relaxing)
  .debug_str     0x0000073c       0x59 ./system/src/cmsis/vectors_stm32f401xe.o
                                 0x1e0 (size before relaxing)
- .debug_str     0x00000795       0x13 ./src/main.o
-                                0x116 (size before relaxing)
+ .debug_str     0x00000795       0x19 ./src/main.o
+                                0x19a (size before relaxing)
 
 .debug_loc
  *(.debug_loc)

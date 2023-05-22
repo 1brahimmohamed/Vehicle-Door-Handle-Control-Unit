@@ -1836,3 +1836,6 @@ java.nio.file.NoSuchFileException: C:\Users\I1bra\Downloads\de.innot.avreclipse.
 
 !ENTRY org.eclipse.equinox.p2.repository 2 0 2023-05-22 16:30:24.303
 !MESSAGE Server returned lastModified <= 0 for https://raw.github.com/guari/eclipse-ui-theme/master/com.github.eclipseuitheme.themes.updatesite/artifacts.jar
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-05-22 17:49:17.096
+!MESSAGE Indexed 'DoorHandle' (18 sources, 159 headers) in 2.15 sec: 10,021 declarations; 16,123 references; 4 unresolved inclusions; 154 syntax errors; 1,192 unresolved names (4.4%)
