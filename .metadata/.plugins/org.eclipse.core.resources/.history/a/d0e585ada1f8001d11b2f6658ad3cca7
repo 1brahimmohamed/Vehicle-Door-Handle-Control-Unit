@@ -1,0 +1,16 @@
+/*
+ * helpers.c
+ *
+ *  Created on: May 22, 2023
+ *  Author: Ibrahim Mohamed
+ */
+
+
+
+
+void unlockDoor(){
+
+}
+void lockDoor(){
+
+}
