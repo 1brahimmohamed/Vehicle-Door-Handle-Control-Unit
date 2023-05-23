@@ -15,12 +15,20 @@ enum doorLockingState{
     DOOR_UNLOCKED
 };
 
+enum vehicleState{
+    OPENED,
+    CLOSED
+};
+
 
 
 /**	----------------------  Functions ---------------------- **/
 
 void unlockDoor(enum doorLockingState *LockingState);
 void lockDoor(enum doorLockingState *LockingState);
+void openDoor(enum vehicleState *vehicleState);
+void closeDoor(enum vehicleState *vehicleState);
+
 void blinkHazardLights(void);
 
 

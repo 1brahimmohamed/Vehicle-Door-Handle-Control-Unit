@@ -6,8 +6,100 @@
  */
 
 #include "helpers.h"
+#include "Rcc.h"
+#include "Gpio.h"
+
+#define LOCK_LED 0
+#define AMBIENT_LED 5
+#define HAZARD_LED 10
+
+#define LOCK_UNLOCK_BTN 0
+#define OPEN_CLOSE_BTN 3
+
+enum doorLockingState *doorLockingState;
+enum vehicleState *vehicleState;
 
 int main(void){
 
+
+	/*enable PORT A and B */
+	Rcc_Init();
+	Rcc_Enable(RCC_GPIOA);
+	Rcc_Enable(RCC_GPIOB);
+
+
+
+	/*set LED pins as outputs*/
+	Gpio_ConfigPin(GPIO_PORT_B, LOCK_LED, GPIO_OUTPUT, GPIO_PUSH_PULL);
+	Gpio_ConfigPin(GPIO_PORT_B, AMBIENT_LED, GPIO_OUTPUT, GPIO_PUSH_PULL);
+	Gpio_ConfigPin(GPIO_PORT_B, HAZARD_LED, GPIO_OUTPUT, GPIO_PUSH_PULL);
+
+
+	/*set push buttons as inputs*/
+	Gpio_ConfigPin(GPIO_PORT_A, LOCK_UNLOCK_BTN, GPIO_INPUT, GPIO_PULLUP);
+	Gpio_ConfigPin(GPIO_PORT_A, OPEN_CLOSE_BTN, GPIO_INPUT, GPIO_PULLUP);
+
+	/*default state all LEDS are off and door is locked & closed*/
+	Gpio_WritePin(GPIO_PORT_B, LOCK_LED, LOW);
+	Gpio_WritePin(GPIO_PORT_B, AMBIENT_LED, LOW);
+	Gpio_WritePin(GPIO_PORT_B, HAZARD_LED, LOW);
+
+	*doorLockingState = DOOR_LOCKED;
+	*vehicleState = CLOSED;
+
+	//enable exti and system config
+	//initialize exti lines -->buttons
+
+
+	while(1){
+
+
+	//if door is closed and unlocked no btns pressed for more then 10 s-->  lock (antitheft lock)
+
+
+	}
+
+
 	return 0;
+}
+
+EXTI0_IRQHandler(void)
+{
+	//if door is closed and locked -->  unlock
+
+	if((*doorLockingState==DOOR_LOCKED)&&(*vehicleState == CLOSED))
+	{
+		unlockDoor(doorLockingState);
+	}
+	//if door is closed and unlocked -->  lock
+	else if((*doorLockingState==DOOR_UNLOCKED)&&(*vehicleState == CLOSED))
+	{
+		lockDoor(doorLockingState);
+	}
+	//if door is open  -->  nothing
+
+
+	//clear pending flag
+	//SET_BIT(EXTI->PR, 0);
+
+}
+
+EXTI3_IRQHandler(void)
+{
+	//if door is closed and unlocked -->  open
+	if((*doorLockingState==DOOR_UNLOCKED)&&(*vehicleState == CLOSED))
+	{
+		openDoor(doorLockingState);
+	}
+	//if door is opened and unlocked -->  close
+
+	else if((*doorLockingState==DOOR_UNLOCKED)&&(*vehicleState == OPENED))
+	{
+		closeDoor(doorLockingState);
+	}
+	//if door is locked  -->  nothing
+
+	//clear pending flag
+	//SET_BIT(EXTI->PR, 0);
+
 }
