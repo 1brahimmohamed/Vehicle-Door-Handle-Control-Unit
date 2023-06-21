@@ -16,7 +16,6 @@ RM := rm -rf
 -include Rcc/subdir.mk
 -include Gpt/subdir.mk
 -include Gpio/subdir.mk
--include EXTI/subdir.mk
 -include subdir.mk
 -include objects.mk
 

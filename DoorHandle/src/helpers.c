@@ -9,105 +9,135 @@
 #include "Gpio.h"
 #include "Gpt.h"
 
-/* LED PORTS */
-#define DOOR_LOCK_LED_PORT      GPIO_PORT_B
-#define DOOR_UNLOCK_LED_PORT    GPIO_PORT_B
-#define HAZARD_LED_PORT         GPIO_PORT_B
-#define AMBIENT_LIGHT_LED_PORT  GPIO_PORT_B
-
-/* LED PINS */
-#define DOOR_LOCK_LED_PIN       GPIO_PIN_0
-#define HAZARD_LED_PIN          GPIO_PIN_10
-#define AMBIENT_LIGHT_LED_PIN   GPIO_PIN_5
-
-/* TIME VALUES in millisecond */
-#define BLINK_DELAY_TICKS    500
-#define AMBIENT_LIGHT_DELAY_TICKS 2000
 
 void unlockDoor(enum doorLockingState *doorLockingState){
-    // lock the door
-    *doorLockingState = DOOR_UNLOCKED;
 
-    // turn on the door unlock LED
-    Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, HIGH);
 
-    // turn on the ambient light
-    Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
+	if(GPT_GetElapsedTime() > 10 && GPT_GetElapsedTime() < 50){
 
-    // blink the hazard two times lights each time 0.5 high and 0.5 low
-    blinkHazardLights();
+		// unlock the door
+		*doorLockingState = DOOR_UNLOCKED;
 
-    // turn off the ambient light
-    Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
+		// turn on the door unlock LED
+		Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, HIGH);
+
+		// turn on the ambient light
+		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
+
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
+	}
+
+
+	if (GPT_GetElapsedTime() > 550 && GPT_GetElapsedTime() < 1050)
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
+
+
+	if (GPT_GetElapsedTime() > 1050 && GPT_GetElapsedTime() < 1550)
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
+
+
+	if(GPT_GetElapsedTime() > 1550 && GPT_GetElapsedTime() < 2050){
+
+		// turn off the ambient light
+		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
+
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
+
+	}
+
 }
 
 void lockDoor(enum doorLockingState *doorLockingState){
-    // lock the door
-    *doorLockingState = DOOR_LOCKED;
 
-    // turn off the door unlock LED
-    Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, LOW);
+	if(GPT_GetElapsedTime() > 10 && GPT_GetElapsedTime() < 50){
+		// lock the door
+		*doorLockingState = DOOR_LOCKED;
 
-    // turn off the ambient light
-    Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
+		// turn off the door unlock LED
+		Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, LOW);
 
-    // blink the hazard two times lights each time 0.5 high and 0.5 low
-    blinkHazardLights();
+		// turn off the ambient light
+		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
+
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
+	}
+
+	if (GPT_GetElapsedTime() > 550 && GPT_GetElapsedTime() < 1050)
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
+
+
+	if (GPT_GetElapsedTime() > 1050 && GPT_GetElapsedTime() < 1550)
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
+
+
+	if (GPT_GetElapsedTime() > 1550 && GPT_GetElapsedTime() < 2050)
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
+
 }
 
 void openDoor(enum vehicleState *vehicleState)
 {
+	if(GPT_GetElapsedTime() > 10 && GPT_GetElapsedTime() < 100){
+		// open the door
+		*vehicleState = OPENED;
 
-	// open the door
-	*vehicleState = OPENED;
+		// turn on the ambient light
+		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
 
-    // turn on the ambient light
-    Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
 
+	}
 }
-
 
 void closeDoor(enum vehicleState *vehicleState)
 {
-	// close the door
-	*vehicleState = CLOSED;
-	// turn off the door unlock LED
-	Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, LOW);
+	if(GPT_GetElapsedTime() > 10 && GPT_GetElapsedTime() < 50){
+		// close the door
+		*vehicleState = CLOSED;
+		// turn off the door unlock LED
+		Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, LOW);
 
-	// turn off the hazard light LED
-	Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
+		// turn off the hazard light LED
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
 
-    // Turn on ambient light
-	Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
+		// Turn on ambient light
+		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
+	}
 
-    // Wait for the GPT timer
 
-//    GPT_StartTimer(AMBIENT_LIGHT_DELAY_TICKS);
-    while (!GPT_CheckTimeIsElapsed());
-
-    // Turn off ambient light
-    Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
+	if(GPT_GetElapsedTime() > 1050 && GPT_GetElapsedTime() < 1150){
+		// Turn off ambient light
+		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
+	}
 
 }
 
+void antiTheft(enum doorLockingState *doorLockingState){
 
-void blinkHazardLights(void){
-    uint8 i;
-    for (i = 0; i < 2; i++)
-    {
-        // Turn on hazard LED
-    	Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
+	if(GPT_GetElapsedTime() > 10010 && GPT_GetElapsedTime() < 10550)
+	{
+		*doorLockingState = DOOR_LOCKED;
 
-        // Wait for the GPT timer
+		// turn on the door unlock LED
+		Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, LOW);
 
-        GPT_StartTimer(BLINK_DELAY_TICKS);
-        while (!GPT_CheckTimeIsElapsed());
+		// turn on the ambient light
+		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
 
-        // Turn off hazard LED
-        Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
+		// Turn on hazards light
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
+	}
 
-        // Wait for the GPT timer
-        GPT_StartTimer(BLINK_DELAY_TICKS);
-        while (!GPT_CheckTimeIsElapsed());
-    }
+	if (GPT_GetElapsedTime() > 10550 && GPT_GetElapsedTime() < 11050){
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
+	}
+
+
+	if (GPT_GetElapsedTime() > 11050 && GPT_GetElapsedTime() < 11550)
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
+
+
+	if (GPT_GetElapsedTime() > 11550 && GPT_GetElapsedTime() < 12050)
+		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
+
 }

@@ -165,7 +165,6 @@
 						</tool>
 					</fileInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="EXTI"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Gpio"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Gpt"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Lib"/>
