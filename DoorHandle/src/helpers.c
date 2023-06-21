@@ -17,8 +17,8 @@
 
 /* LED PINS */
 #define DOOR_LOCK_LED_PIN       GPIO_PIN_0
-#define HAZARD_LED_PIN          GPIO_PIN_1
-#define AMBIENT_LIGHT_LED_PIN   GPIO_PIN_2
+#define HAZARD_LED_PIN          GPIO_PIN_10
+#define AMBIENT_LIGHT_LED_PIN   GPIO_PIN_5
 
 /* TIME VALUES in millisecond */
 #define BLINK_DELAY_TICKS    500
@@ -30,7 +30,6 @@ void unlockDoor(enum doorLockingState *doorLockingState){
 
     // turn on the door unlock LED
     Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, HIGH);
-
 
     // turn on the ambient light
     Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
@@ -83,7 +82,7 @@ void closeDoor(enum vehicleState *vehicleState)
 
     // Wait for the GPT timer
 
-    GPT_StartTimer(AMBIENT_LIGHT_DELAY_TICKS);
+//    GPT_StartTimer(AMBIENT_LIGHT_DELAY_TICKS);
     while (!GPT_CheckTimeIsElapsed());
 
     // Turn off ambient light
