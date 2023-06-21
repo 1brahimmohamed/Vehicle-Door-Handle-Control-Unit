@@ -21,8 +21,8 @@
 #define AMBIENT_LIGHT_LED_PIN   GPIO_PIN_5
 
 /* TIME VALUES in millisecond */
-#define BLINK_DELAY_TICKS    500
-#define AMBIENT_LIGHT_DELAY_TICKS 2000
+#define BLINK_DELAY_TICKS    200
+#define AMBIENT_LIGHT_DELAY_TICKS 500
 
 void unlockDoor(enum doorLockingState *doorLockingState){
     // lock the door
@@ -82,7 +82,7 @@ void closeDoor(enum vehicleState *vehicleState)
 
     // Wait for the GPT timer
 
-//    GPT_StartTimer(AMBIENT_LIGHT_DELAY_TICKS);
+    GPT_StartTimer(AMBIENT_LIGHT_DELAY_TICKS);
     while (!GPT_CheckTimeIsElapsed());
 
     // Turn off ambient light
