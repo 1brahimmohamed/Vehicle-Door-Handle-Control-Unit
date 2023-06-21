@@ -28,6 +28,7 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Gpio \
+Gpt \
 Rcc \
 src \
 system/src/cmsis \

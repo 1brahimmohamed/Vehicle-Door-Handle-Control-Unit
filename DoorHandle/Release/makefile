@@ -14,6 +14,7 @@ RM := rm -rf
 -include system/src/cmsis/subdir.mk
 -include src/subdir.mk
 -include Rcc/subdir.mk
+-include Gpt/subdir.mk
 -include Gpio/subdir.mk
 -include subdir.mk
 -include objects.mk

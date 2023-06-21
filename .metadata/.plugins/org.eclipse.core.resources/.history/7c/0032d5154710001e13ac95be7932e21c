@@ -62,3 +62,44 @@ int main(void){
 
 	return 0;
 }
+
+EXTI0_IRQHandler(void)
+{
+	//if door is closed and locked -->  unlock
+
+	if((*doorLockingState==DOOR_LOCKED)&&(*vehicleState == CLOSED))
+	{
+		unlockDoor(doorLockingState);
+	}
+	//if door is closed and unlocked -->  lock
+	else if((*doorLockingState==DOOR_UNLOCKED)&&(*vehicleState == CLOSED))
+	{
+		lockDoor(doorLockingState);
+	}
+	//if door is open  -->  nothing
+
+
+	//clear pending flag
+	//SET_BIT(EXTI->PR, 0);
+
+}
+
+EXTI3_IRQHandler(void)
+{
+	//if door is closed and unlocked -->  open
+	if((*doorLockingState==DOOR_UNLOCKED)&&(*vehicleState == CLOSED))
+	{
+		openDoor(doorLockingState);
+	}
+	//if door is opened and unlocked -->  close
+
+	else if((*doorLockingState==DOOR_UNLOCKED)&&(*vehicleState == OPENED))
+	{
+		closeDoor(doorLockingState);
+	}
+	//if door is locked  -->  nothing
+
+	//clear pending flag
+	//SET_BIT(EXTI->PR, 0);
+
+}

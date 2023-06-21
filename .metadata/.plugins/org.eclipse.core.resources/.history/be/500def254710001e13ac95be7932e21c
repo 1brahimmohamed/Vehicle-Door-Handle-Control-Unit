@@ -87,9 +87,10 @@ void closeDoor(enum vehicleState *vehicleState)
     while (!GPT_CheckTimeIsElapsed());
 
     // Turn off ambient light
-    Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
+    (AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
 
 }
+
 
 
 void blinkHazardLights(void){

@@ -15,21 +15,19 @@ void GPT_Init(void){
 
 	TIM_TypeDef *TIMx = GPT_TIMER; // Declare the TIMx pointer
 
-
 	// Configure the GPT timer
 	TIMx->PSC = GPT_PRESCALER; // Set the prescaler value (0 for no prescaling)
-	TIMx->ARR = 0xFFFF; // Set the auto-reload value to the maximum (16-bit timer)
 
 	// Configure the GPT control register
-	TIMx->CR1 = 0; // Clear the control register
-	TIMx->CR1 |= TIM_CR1_ARPE; // Enable auto-reload preload
-	TIMx->CR1 |= TIM_CR1_URS; // Only generate interrupts for counter overflow/underflow
-	TIMx->CR1 |= TIM_CR1_CEN; // Enable the GPT timer
+	TIMx->EGR |= 1<<0;
 }
 
 void GPT_StartTimer(uint32 OverFlowTicks)
 {
     TIM_TypeDef *TIMx = GPT_TIMER;
+
+    // clear the counter register
+    TIMx->CNT = 0;
 
     // Set the number of ticks before timer overflow
     TIMx->ARR = OverFlowTicks;
@@ -43,7 +41,7 @@ uint8 GPT_CheckTimeIsElapsed(void)
     TIM_TypeDef *TIMx = GPT_TIMER;
 
     // Check if an overflow occurred
-    if ((TIMx->SR & TIM_SR_UIF) != 0)
+    if (TIMx->CNT == TIMx->ARR - 1)
     {
         // Clear the overflow flag
         TIMx->SR &= ~TIM_SR_UIF;

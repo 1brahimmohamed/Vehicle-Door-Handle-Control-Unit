@@ -92,6 +92,7 @@ void closeDoor(enum vehicleState *vehicleState)
 }
 
 
+
 void blinkHazardLights(void){
     uint8 i;
     for (i = 0; i < 2; i++)
