@@ -1,9 +1,9 @@
-19:08:36 **** Incremental Build of configuration Release for project DoorHandle ****
+02:01:33 **** Incremental Build of configuration Release for project DoorHandle ****
 make all 
-Building file: ../src/main.c
+Building file: ../src/helpers.c
 Invoking: GNU Arm Cross C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
  
 Building target: DoorHandle.elf
 Invoking: GNU Arm Cross C++ Linker
@@ -17,9 +17,9 @@ Finished building: DoorHandle.hex
 Invoking: GNU Arm Cross Print Size
 arm-none-eabi-size --format=berkeley "DoorHandle.elf"
    text	   data	    bss	    dec	    hex	filename
-   2250	     76	    268	   2594	    a22	DoorHandle.elf
+   3398	     76	    260	   3734	    e96	DoorHandle.elf
 Finished building: DoorHandle.siz
  
 
-19:08:37 Build Finished. 0 errors, 0 warnings. (took 558ms)
+02:01:34 Build Finished. 0 errors, 0 warnings. (took 1s.360ms)
 

@@ -7,61 +7,114 @@
 
 #include "helpers.h"
 #include "Rcc.h"
-
 #include "Gpio.h"
-#define LOCK_LED 0
-#define AMBIENT_LED 5
-#define HAZARD_LED 10
+#include "Gpt.h"
 
-#define LOCK_UNLOCK_BTN 0
-#define OPEN_CLOSE_BTN 3
 
-enum doorLockingState *doorLockingState;
-enum vehicleState *vehicleState;
+enum doorLockingState doorLockingState;
+enum vehicleState vehicleState;
 
 int main(void){
 
 
-	/*enable PORT A and B */
+	/* enable PORT A and B */
 	Rcc_Init();
 	Rcc_Enable(RCC_GPIOA);
 	Rcc_Enable(RCC_GPIOB);
 
+	GPT_Init();
 
 
 	/*set LED pins as outputs*/
-	Gpio_ConfigPin(GPIO_PORT_B, LOCK_LED, GPIO_OUTPUT, GPIO_PUSH_PULL);
-	Gpio_ConfigPin(GPIO_PORT_B, AMBIENT_LED, GPIO_OUTPUT, GPIO_PUSH_PULL);
-	Gpio_ConfigPin(GPIO_PORT_B, HAZARD_LED, GPIO_OUTPUT, GPIO_PUSH_PULL);
+	Gpio_ConfigPin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, GPIO_OUTPUT, GPIO_PUSH_PULL);
+	Gpio_ConfigPin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, GPIO_OUTPUT, GPIO_PUSH_PULL);
+	Gpio_ConfigPin(HAZARD_LED_PORT, HAZARD_LED_PIN, GPIO_OUTPUT, GPIO_PUSH_PULL);
 
 
 	/*set push buttons as inputs*/
 	Gpio_ConfigPin(GPIO_PORT_A, LOCK_UNLOCK_BTN, GPIO_INPUT, GPIO_PULL_UP);
 	Gpio_ConfigPin(GPIO_PORT_A, OPEN_CLOSE_BTN, GPIO_INPUT, GPIO_PULL_UP);
 
+
 	/*default state all LEDS are off and door is locked & closed*/
-	Gpio_WritePin(GPIO_PORT_B, LOCK_LED, LOW);
-	Gpio_WritePin(GPIO_PORT_B, AMBIENT_LED, LOW);
-	Gpio_WritePin(GPIO_PORT_B, HAZARD_LED, LOW);
+	Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, LOW);
+	Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
+	Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
 
-	*doorLockingState = DOOR_LOCKED;
-	*vehicleState = CLOSED;
+	/* initial states of the vehicle */
+	doorLockingState = DOOR_LOCKED;
+	vehicleState = CLOSED;
 
+	/* variable to store code scenarios */
+	enum cases scenario;
 
 	while(1)
 	{
 
+		/* check if btn is pressed */
 
-		//if door is closed and unlocked no btns pressed for more then 10 s-->  lock (antitheft lock)
+		if(GPIO_ReadPinState(GPIO_PORT_A, OPEN_CLOSE_BTN))
+		{
+			if( (doorLockingState == DOOR_UNLOCKED) && (vehicleState == OPENED))
+			{
+				scenario = case2;
+			}
 
-		if(GPIO_ReadPinState(GPIO_PORT_A, OPEN_CLOSE_BTN)){
+			/* if door is opened and unlocked -->  close */
+			else if((doorLockingState==DOOR_UNLOCKED)&&(vehicleState == CLOSED))
+			{
+				scenario = case3;
+			}
+
+			GPT_StartTimer(13000);
+		}
+
+		if(GPIO_ReadPinState(GPIO_PORT_A, LOCK_UNLOCK_BTN))
+		{
+
+			if( (doorLockingState == DOOR_LOCKED) && (vehicleState == CLOSED) )
+			{
+				scenario = case0;
+			}
+
+			else if( (doorLockingState==DOOR_UNLOCKED) && (vehicleState == CLOSED) )
+			{
+				scenario = case1;
+			}
+
+			GPT_StartTimer(13000);
 
 		}
 
-		if(GPIO_ReadPinState(GPIO_PORT_A, LOCK_UNLOCK_BTN)){
+		switch(scenario){
+		case case0:
+			unlockDoor(&doorLockingState);
+			break;
+		case case1:
+			lockDoor(&doorLockingState);
+			break;
+		case case2:
+			closeDoor(&vehicleState);
+			break;
+		case case3:
+			openDoor(&vehicleState);
+			break;
+		case case4:
+			antiTheft(&doorLockingState);
+			break;
+		}
 
+
+		if( (doorLockingState==DOOR_UNLOCKED) && (vehicleState == CLOSED) ){
+			if(GPT_GetElapsedTime() > 9900){
+				scenario = case4;
+			}
 		}
 
 	}
 	return 0;
 }
+
+
+
+

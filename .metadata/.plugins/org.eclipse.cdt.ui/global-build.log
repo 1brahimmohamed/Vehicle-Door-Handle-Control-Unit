@@ -782,3 +782,1247 @@ arm-none-eabi-size --format=berkeley "DoorHandle.elf"
    2250	     76	    268	   2594	    a22	DoorHandle.elf
 Finished building: DoorHandle.siz
  
+22:44:39 **** Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../system/src/newlib/assert.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/newlib/assert.d" -MT"system/src/newlib/assert.o" -c -o "system/src/newlib/assert.o" "../system/src/newlib/assert.c"
+Finished building: ../system/src/newlib/assert.c
+ 
+Building file: ../system/src/newlib/cxx.cpp
+Invoking: GNU Arm Cross C++ Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -MMD -MP -MF"system/src/newlib/cxx.d" -MT"system/src/newlib/cxx.o" -c -o "system/src/newlib/cxx.o" "../system/src/newlib/cxx.cpp"
+Finished building: ../system/src/newlib/cxx.cpp
+ 
+Building file: ../system/src/newlib/exit.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/newlib/exit.d" -MT"system/src/newlib/exit.o" -c -o "system/src/newlib/exit.o" "../system/src/newlib/exit.c"
+Finished building: ../system/src/newlib/exit.c
+ 
+Building file: ../system/src/newlib/sbrk.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/newlib/sbrk.d" -MT"system/src/newlib/sbrk.o" -c -o "system/src/newlib/sbrk.o" "../system/src/newlib/sbrk.c"
+Finished building: ../system/src/newlib/sbrk.c
+ 
+Building file: ../system/src/newlib/startup.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -DOS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/newlib/startup.d" -MT"system/src/newlib/startup.o" -c -o "system/src/newlib/startup.o" "../system/src/newlib/startup.c"
+Finished building: ../system/src/newlib/startup.c
+ 
+Building file: ../system/src/newlib/syscalls.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/newlib/syscalls.d" -MT"system/src/newlib/syscalls.o" -c -o "system/src/newlib/syscalls.o" "../system/src/newlib/syscalls.c"
+Finished building: ../system/src/newlib/syscalls.c
+ 
+Building file: ../system/src/diag/trace-impl.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/diag/trace-impl.d" -MT"system/src/diag/trace-impl.o" -c -o "system/src/diag/trace-impl.o" "../system/src/diag/trace-impl.c"
+Finished building: ../system/src/diag/trace-impl.c
+ 
+Building file: ../system/src/diag/trace.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/diag/trace.d" -MT"system/src/diag/trace.o" -c -o "system/src/diag/trace.o" "../system/src/diag/trace.c"
+Finished building: ../system/src/diag/trace.c
+ 
+Building file: ../system/src/cortexm/exception-handlers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/cortexm/exception-handlers.d" -MT"system/src/cortexm/exception-handlers.o" -c -o "system/src/cortexm/exception-handlers.o" "../system/src/cortexm/exception-handlers.c"
+Finished building: ../system/src/cortexm/exception-handlers.c
+ 
+Building file: ../system/src/cortexm/initialize-hardware.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/cortexm/initialize-hardware.d" -MT"system/src/cortexm/initialize-hardware.o" -c -o "system/src/cortexm/initialize-hardware.o" "../system/src/cortexm/initialize-hardware.c"
+Finished building: ../system/src/cortexm/initialize-hardware.c
+ 
+Building file: ../system/src/cortexm/reset-hardware.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/cortexm/reset-hardware.d" -MT"system/src/cortexm/reset-hardware.o" -c -o "system/src/cortexm/reset-hardware.o" "../system/src/cortexm/reset-hardware.c"
+Finished building: ../system/src/cortexm/reset-hardware.c
+ 
+Building file: ../system/src/cmsis/system_stm32f4xx.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -Wno-padded -MMD -MP -MF"system/src/cmsis/system_stm32f4xx.d" -MT"system/src/cmsis/system_stm32f4xx.o" -c -o "system/src/cmsis/system_stm32f4xx.o" "../system/src/cmsis/system_stm32f4xx.c"
+Finished building: ../system/src/cmsis/system_stm32f4xx.c
+ 
+Building file: ../system/src/cmsis/vectors_stm32f401xe.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"system/src/cmsis/vectors_stm32f401xe.d" -MT"system/src/cmsis/vectors_stm32f401xe.o" -c -o "system/src/cmsis/vectors_stm32f401xe.o" "../system/src/cmsis/vectors_stm32f401xe.c"
+Finished building: ../system/src/cmsis/vectors_stm32f401xe.c
+ 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:32:2: warning: implicit declaration of function 'GPT_Init' [-Wimplicit-function-declaration]
+   32 |  GPT_Init();
+      |  ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../Rcc/Rcc.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"Rcc/Rcc.d" -MT"Rcc/Rcc.o" -c -o "Rcc/Rcc.o" "../Rcc/Rcc.c"
+Finished building: ../Rcc/Rcc.c
+ 
+Building file: ../Gpt/Gpt.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"Gpt/Gpt.d" -MT"Gpt/Gpt.o" -c -o "Gpt/Gpt.o" "../Gpt/Gpt.c"
+Finished building: ../Gpt/Gpt.c
+ 
+Building file: ../Gpio/Gpio.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"Gpio/Gpio.d" -MT"Gpio/Gpio.o" -c -o "Gpio/Gpio.o" "../Gpio/Gpio.c"
+../Gpio/Gpio.c: In function 'Gpio_ConfigPin':
+../Gpio/Gpio.c:20:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   20 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_WritePin':
+../Gpio/Gpio.c:37:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   37 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_ReadPin':
+../Gpio/Gpio.c:45:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   45 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+Finished building: ../Gpio/Gpio.c
+ 
+Building file: ../EXTI/Exti.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"EXTI/Exti.d" -MT"EXTI/Exti.o" -c -o "EXTI/Exti.o" "../EXTI/Exti.c"
+../EXTI/Exti.c: In function 'Exti_Init':
+../EXTI/Exti.c:33:16: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+   33 |  if((EXTI_Line >= 0 )&& (EXTI_Line <5)){
+      |                ^~
+../EXTI/Exti.c:46:15: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+   46 |  if(EXTI_Line >= 0 && EXTI_Line < 4){
+      |               ^~
+../EXTI/Exti.c:56:14: warning: assignment to 'uint32 *' {aka 'long unsigned int *'} from incompatible pointer type 'uint64 *' {aka 'long long unsigned int *'} [-Wincompatible-pointer-types]
+   56 |   SYSCFG_REG =  &(SYSCFG->EXTICR4);
+      |              ^
+Finished building: ../EXTI/Exti.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2790	     76	    260	   3126	    c36	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+22:49:46 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:32:2: warning: implicit declaration of function 'GPT_Init' [-Wimplicit-function-declaration]
+   32 |  GPT_Init();
+      |  ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2798	     76	    260	   3134	    c3e	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:24:55 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+../src/helpers.c: In function 'unlockDoor':
+../src/helpers.c:40:24: warning: comparison between pointer and integer
+   40 |  if(GPT_GetElapsedTime > 2010 && GPT_GetElapsedTime < 2110){
+      |                        ^
+../src/helpers.c:40:53: warning: comparison between pointer and integer
+   40 |  if(GPT_GetElapsedTime > 2010 && GPT_GetElapsedTime < 2110){
+      |                                                     ^
+../src/helpers.c: In function 'closeDoor':
+../src/helpers.c:95:24: warning: comparison between pointer and integer
+   95 |  if(GPT_GetElapsedTime > 1010 && GPT_GetElapsedTime < 1110){
+      |                        ^
+../src/helpers.c:95:53: warning: comparison between pointer and integer
+   95 |  if(GPT_GetElapsedTime > 1010 && GPT_GetElapsedTime < 1110){
+      |                                                     ^
+../src/helpers.c: In function 'antiTheft':
+../src/helpers.c:107:29: error: 'LOCK_LED' undeclared (first use in this function)
+  107 |  Gpio_WritePin(GPIO_PORT_B, LOCK_LED, LOW);
+      |                             ^~~~~~~~
+../src/helpers.c:107:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/helpers.c:110:29: error: 'AMBIENT_LED' undeclared (first use in this function)
+  110 |  Gpio_WritePin(GPIO_PORT_B, AMBIENT_LED, LOW);
+      |                             ^~~~~~~~~~~
+../src/helpers.c:102:39: warning: parameter 'doorLockingState' set but not used [-Wunused-but-set-parameter]
+  102 | void antiTheft(enum doorLockingState *doorLockingState){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/helpers.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:27:32 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+../src/helpers.c: In function 'antiTheft':
+../src/helpers.c:102:39: warning: parameter 'doorLockingState' set but not used [-Wunused-but-set-parameter]
+  102 | void antiTheft(enum doorLockingState *doorLockingState){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c:30:1: error: expected ';', identifier or '(' before 'int'
+   30 | int main(void){
+      | ^~~
+../src/main.c: In function 'main':
+../src/main.c:38:2: warning: implicit declaration of function 'GPT_Init' [-Wimplicit-function-declaration]
+   38 |  GPT_Init();
+      |  ^~~~~~~~
+../src/main.c:78:4: warning: implicit declaration of function 'GPT_StartTimer' [-Wimplicit-function-declaration]
+   78 |    GPT_StartTimer(5000);
+      |    ^~~~~~~~~~~~~~
+../src/main.c:102:13: error: expected ':' or '...' before ';' token
+  102 |   case case1;
+      |             ^
+../src/main.c:105:13: error: expected ':' or '...' before ';' token
+  105 |   case case2;
+      |             ^
+../src/main.c:106:4: error: too few arguments to function 'closeDoor'
+  106 |    closeDoor();
+      |    ^~~~~~~~~
+In file included from ../src/main.c:8:
+../src/helpers.h:30:6: note: declared here
+   30 | void closeDoor(enum vehicleState *vehicleState);
+      |      ^~~~~~~~~
+../src/main.c:109:4: error: too few arguments to function 'closeDoor'
+  109 |    closeDoor();
+      |    ^~~~~~~~~
+In file included from ../src/main.c:8:
+../src/helpers.h:30:6: note: declared here
+   30 | void closeDoor(enum vehicleState *vehicleState);
+      |      ^~~~~~~~~
+../src/main.c:98:3: warning: enumeration value 'case1' not handled in switch [-Wswitch]
+   98 |   switch(scenario){
+      |   ^~~~~~
+../src/main.c:98:3: warning: enumeration value 'case2' not handled in switch [-Wswitch]
+../src/main.c:115:7: warning: implicit declaration of function 'GPT_GetElapsedTime' [-Wimplicit-function-declaration]
+  115 |    if(GPT_GetElapsedTime() > 999 && GPT_GetElapsedTime() < 1100){
+      |       ^~~~~~~~~~~~~~~~~~
+../src/main.c:116:5: error: too few arguments to function 'antiTheft'
+  116 |     antiTheft();
+      |     ^~~~~~~~~
+In file included from ../src/main.c:8:
+../src/helpers.h:31:6: note: declared here
+   31 | void antiTheft(enum doorLockingState *doorLockingState);
+      |      ^~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:28:15 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c:30:1: error: expected ';', identifier or '(' before 'int'
+   30 | int main(void){
+      | ^~~
+../src/main.c: In function 'main':
+../src/main.c:38:2: warning: implicit declaration of function 'GPT_Init' [-Wimplicit-function-declaration]
+   38 |  GPT_Init();
+      |  ^~~~~~~~
+../src/main.c:78:4: warning: implicit declaration of function 'GPT_StartTimer' [-Wimplicit-function-declaration]
+   78 |    GPT_StartTimer(5000);
+      |    ^~~~~~~~~~~~~~
+../src/main.c:115:7: warning: implicit declaration of function 'GPT_GetElapsedTime' [-Wimplicit-function-declaration]
+  115 |    if(GPT_GetElapsedTime() > 999 && GPT_GetElapsedTime() < 1100){
+      |       ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:28:42 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:38:2: warning: implicit declaration of function 'GPT_Init' [-Wimplicit-function-declaration]
+   38 |  GPT_Init();
+      |  ^~~~~~~~
+../src/main.c:78:4: warning: implicit declaration of function 'GPT_StartTimer' [-Wimplicit-function-declaration]
+   78 |    GPT_StartTimer(5000);
+      |    ^~~~~~~~~~~~~~
+../src/main.c:115:7: warning: implicit declaration of function 'GPT_GetElapsedTime' [-Wimplicit-function-declaration]
+  115 |    if(GPT_GetElapsedTime() > 999 && GPT_GetElapsedTime() < 1100){
+      |       ^~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2974	     76	    260	   3310	    cee	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:29:13 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2974	     76	    260	   3310	    cee	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:29:20 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2974	     76	    260	   3310	    cee	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:32:33 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+../src/helpers.c: In function 'antiTheft':
+../src/helpers.c:103:39: warning: parameter 'doorLockingState' set but not used [-Wunused-but-set-parameter]
+  103 | void antiTheft(enum doorLockingState *doorLockingState){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2974	     76	    260	   3310	    cee	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:34:06 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:8: error: expected expression before 'default'
+  113 |   case default:
+      |        ^~~~~~~
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+00:34:27 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2982	     76	    260	   3318	    cf6	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:44:04 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+../src/helpers.c: In function 'antiTheft':
+../src/helpers.c:131:39: warning: parameter 'doorLockingState' set but not used [-Wunused-but-set-parameter]
+  131 | void antiTheft(enum doorLockingState *doorLockingState){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3318	     76	    260	   3654	    e46	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:47:36 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+../src/helpers.c: In function 'antiTheft':
+../src/helpers.c:131:39: warning: parameter 'doorLockingState' set but not used [-Wunused-but-set-parameter]
+  131 | void antiTheft(enum doorLockingState *doorLockingState){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3334	     76	    260	   3670	    e56	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:51:18 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3334	     76	    260	   3670	    e56	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:52:38 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+../src/helpers.c: In function 'antiTheft':
+../src/helpers.c:131:39: warning: parameter 'doorLockingState' set but not used [-Wunused-but-set-parameter]
+  131 | void antiTheft(enum doorLockingState *doorLockingState){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3190	     76	    260	   3526	    dc6	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:54:04 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+../src/helpers.c: In function 'antiTheft':
+../src/helpers.c:131:39: warning: parameter 'doorLockingState' set but not used [-Wunused-but-set-parameter]
+  131 | void antiTheft(enum doorLockingState *doorLockingState){
+      |                ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3182	     76	    260	   3518	    dbe	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:55:24 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3210	     76	    260	   3546	    dda	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:56:18 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3210	     76	    260	   3546	    dda	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:57:29 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3194	     76	    260	   3530	    dca	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+00:58:21 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3318	     76	    260	   3654	    e46	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:00:40 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3206	     76	    260	   3542	    dd6	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:02:13 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3206	     76	    260	   3542	    dd6	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:03:56 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3206	     76	    260	   3542	    dd6	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:04:05 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3318	     76	    260	   3654	    e46	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:06:15 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3318	     76	    260	   3654	    e46	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:08:23 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3318	     76	    260	   3654	    e46	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:09:07 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3318	     76	    260	   3654	    e46	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:12:13 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3318	     76	    260	   3654	    e46	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:13:54 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3318	     76	    260	   3654	    e46	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:16:07 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3322	     76	    260	   3658	    e4a	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:18:49 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3378	     76	    260	   3714	    e82	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:18:51 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3378	     76	    260	   3714	    e82	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:22:10 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\EXTI" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3386	     76	    260	   3722	    e8a	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:40:37 **** Clean-only build of configuration Release for project DoorHandle ****
+make clean 
+rm -rf ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o  ./EXTI/Exti.o DoorHandle.hex DoorHandle.siz ./system/src/newlib/assert.d ./system/src/newlib/exit.d ./system/src/newlib/sbrk.d ./system/src/newlib/startup.d ./system/src/newlib/syscalls.d  ./system/src/diag/trace-impl.d ./system/src/diag/trace.d  ./system/src/cortexm/exception-handlers.d ./system/src/cortexm/initialize-hardware.d ./system/src/cortexm/reset-hardware.d  ./system/src/cmsis/system_stm32f4xx.d ./system/src/cmsis/vectors_stm32f401xe.d  ./src/helpers.d ./src/main.d  ./Rcc/Rcc.d  ./Gpt/Gpt.d  ./Gpio/Gpio.d  ./EXTI/Exti.d ./system/src/newlib/cxx.d  DoorHandle.elf
+ 
+01:40:38 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../system/src/newlib/assert.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/newlib/assert.d" -MT"system/src/newlib/assert.o" -c -o "system/src/newlib/assert.o" "../system/src/newlib/assert.c"
+Finished building: ../system/src/newlib/assert.c
+ 
+Building file: ../system/src/newlib/cxx.cpp
+Invoking: GNU Arm Cross C++ Compiler
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu++11 -fabi-version=0 -fno-exceptions -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -MMD -MP -MF"system/src/newlib/cxx.d" -MT"system/src/newlib/cxx.o" -c -o "system/src/newlib/cxx.o" "../system/src/newlib/cxx.cpp"
+Finished building: ../system/src/newlib/cxx.cpp
+ 
+Building file: ../system/src/newlib/exit.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/newlib/exit.d" -MT"system/src/newlib/exit.o" -c -o "system/src/newlib/exit.o" "../system/src/newlib/exit.c"
+Finished building: ../system/src/newlib/exit.c
+ 
+Building file: ../system/src/newlib/sbrk.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/newlib/sbrk.d" -MT"system/src/newlib/sbrk.o" -c -o "system/src/newlib/sbrk.o" "../system/src/newlib/sbrk.c"
+Finished building: ../system/src/newlib/sbrk.c
+ 
+Building file: ../system/src/newlib/startup.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DUSE_HAL_DRIVER -DHSE_VALUE=8000000 -DOS_INCLUDE_STARTUP_INIT_MULTIPLE_RAM_SECTIONS -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/newlib/startup.d" -MT"system/src/newlib/startup.o" -c -o "system/src/newlib/startup.o" "../system/src/newlib/startup.c"
+Finished building: ../system/src/newlib/startup.c
+ 
+Building file: ../system/src/newlib/syscalls.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/newlib/syscalls.d" -MT"system/src/newlib/syscalls.o" -c -o "system/src/newlib/syscalls.o" "../system/src/newlib/syscalls.c"
+Finished building: ../system/src/newlib/syscalls.c
+ 
+Building file: ../system/src/diag/trace-impl.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/diag/trace-impl.d" -MT"system/src/diag/trace-impl.o" -c -o "system/src/diag/trace-impl.o" "../system/src/diag/trace-impl.c"
+Finished building: ../system/src/diag/trace-impl.c
+ 
+Building file: ../system/src/diag/trace.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/diag/trace.d" -MT"system/src/diag/trace.o" -c -o "system/src/diag/trace.o" "../system/src/diag/trace.c"
+Finished building: ../system/src/diag/trace.c
+ 
+Building file: ../system/src/cortexm/exception-handlers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/cortexm/exception-handlers.d" -MT"system/src/cortexm/exception-handlers.o" -c -o "system/src/cortexm/exception-handlers.o" "../system/src/cortexm/exception-handlers.c"
+Finished building: ../system/src/cortexm/exception-handlers.c
+ 
+Building file: ../system/src/cortexm/initialize-hardware.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/cortexm/initialize-hardware.d" -MT"system/src/cortexm/initialize-hardware.o" -c -o "system/src/cortexm/initialize-hardware.o" "../system/src/cortexm/initialize-hardware.c"
+Finished building: ../system/src/cortexm/initialize-hardware.c
+ 
+Building file: ../system/src/cortexm/reset-hardware.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/cortexm/reset-hardware.d" -MT"system/src/cortexm/reset-hardware.o" -c -o "system/src/cortexm/reset-hardware.o" "../system/src/cortexm/reset-hardware.c"
+Finished building: ../system/src/cortexm/reset-hardware.c
+ 
+Building file: ../system/src/cmsis/system_stm32f4xx.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -Wno-padded -MMD -MP -MF"system/src/cmsis/system_stm32f4xx.d" -MT"system/src/cmsis/system_stm32f4xx.o" -c -o "system/src/cmsis/system_stm32f4xx.o" "../system/src/cmsis/system_stm32f4xx.c"
+Finished building: ../system/src/cmsis/system_stm32f4xx.c
+ 
+Building file: ../system/src/cmsis/vectors_stm32f401xe.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"system/src/cmsis/vectors_stm32f401xe.d" -MT"system/src/cmsis/vectors_stm32f401xe.o" -c -o "system/src/cmsis/vectors_stm32f401xe.o" "../system/src/cmsis/vectors_stm32f401xe.c"
+Finished building: ../system/src/cmsis/vectors_stm32f401xe.c
+ 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c:10:10: fatal error: Exti.h: No such file or directory
+   10 | #include "Exti.h"
+      |          ^~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:40:45 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:34: error: 'HAZARD_LED_PIN_PIN' undeclared (first use in this function); did you mean 'HAZARD_LED_PIN'?
+   33 |  Gpio_ConfigPin(HAZARD_LED_PORT, HAZARD_LED_PIN_PIN, GPIO_OUTPUT, GPIO_PUSH_PULL);
+      |                                  ^~~~~~~~~~~~~~~~~~
+      |                                  HAZARD_LED_PIN
+../src/main.c:33:34: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:40:50 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:34: error: 'HAZARD_LED_PIN_PIN' undeclared (first use in this function); did you mean 'HAZARD_LED_PIN'?
+   33 |  Gpio_ConfigPin(HAZARD_LED_PORT, HAZARD_LED_PIN_PIN, GPIO_OUTPUT, GPIO_PUSH_PULL);
+      |                                  ^~~~~~~~~~~~~~~~~~
+      |                                  HAZARD_LED_PIN
+../src/main.c:33:34: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:41:16 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:34: error: 'HAZARD_LED_PIN_PIN' undeclared (first use in this function); did you mean 'HAZARD_LED_PIN'?
+   33 |  Gpio_ConfigPin(HAZARD_LED_PORT, HAZARD_LED_PIN_PIN, GPIO_OUTPUT, GPIO_PUSH_PULL);
+      |                                  ^~~~~~~~~~~~~~~~~~
+      |                                  HAZARD_LED_PIN
+../src/main.c:33:34: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+01:41:29 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../Rcc/Rcc.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Rcc/Rcc.d" -MT"Rcc/Rcc.o" -c -o "Rcc/Rcc.o" "../Rcc/Rcc.c"
+Finished building: ../Rcc/Rcc.c
+ 
+Building file: ../Gpt/Gpt.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpt/Gpt.d" -MT"Gpt/Gpt.o" -c -o "Gpt/Gpt.o" "../Gpt/Gpt.c"
+Finished building: ../Gpt/Gpt.c
+ 
+Building file: ../Gpio/Gpio.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpio/Gpio.d" -MT"Gpio/Gpio.o" -c -o "Gpio/Gpio.o" "../Gpio/Gpio.c"
+../Gpio/Gpio.c: In function 'Gpio_ConfigPin':
+../Gpio/Gpio.c:19:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   19 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_WritePin':
+../Gpio/Gpio.c:36:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   36 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_ReadPin':
+../Gpio/Gpio.c:44:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   44 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+Finished building: ../Gpio/Gpio.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3386	     76	    260	   3722	    e8a	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:47:19 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3398	     76	    260	   3734	    e96	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:49:39 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../Gpt/Gpt.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpt/Gpt.d" -MT"Gpt/Gpt.o" -c -o "Gpt/Gpt.o" "../Gpt/Gpt.c"
+Finished building: ../Gpt/Gpt.c
+ 
+Building file: ../Gpio/Gpio.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpio/Gpio.d" -MT"Gpio/Gpio.o" -c -o "Gpio/Gpio.o" "../Gpio/Gpio.c"
+../Gpio/Gpio.c: In function 'Gpio_ConfigPin':
+../Gpio/Gpio.c:19:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   19 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_WritePin':
+../Gpio/Gpio.c:36:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   36 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_ReadPin':
+../Gpio/Gpio.c:44:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   44 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+Finished building: ../Gpio/Gpio.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3398	     76	    260	   3734	    e96	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:50:56 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../Gpt/Gpt.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpt/Gpt.d" -MT"Gpt/Gpt.o" -c -o "Gpt/Gpt.o" "../Gpt/Gpt.c"
+Finished building: ../Gpt/Gpt.c
+ 
+Building file: ../Gpio/Gpio.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpio/Gpio.d" -MT"Gpio/Gpio.o" -c -o "Gpio/Gpio.o" "../Gpio/Gpio.c"
+../Gpio/Gpio.c: In function 'Gpio_ConfigPin':
+../Gpio/Gpio.c:19:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   19 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_WritePin':
+../Gpio/Gpio.c:36:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   36 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_ReadPin':
+../Gpio/Gpio.c:44:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   44 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+Finished building: ../Gpio/Gpio.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3398	     76	    260	   3734	    e96	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+01:51:32 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../Gpt/Gpt.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpt/Gpt.d" -MT"Gpt/Gpt.o" -c -o "Gpt/Gpt.o" "../Gpt/Gpt.c"
+Finished building: ../Gpt/Gpt.c
+ 
+Building file: ../Gpio/Gpio.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpio/Gpio.d" -MT"Gpio/Gpio.o" -c -o "Gpio/Gpio.o" "../Gpio/Gpio.c"
+../Gpio/Gpio.c: In function 'Gpio_ConfigPin':
+../Gpio/Gpio.c:19:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   19 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_WritePin':
+../Gpio/Gpio.c:36:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   36 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_ReadPin':
+../Gpio/Gpio.c:44:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   44 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+Finished building: ../Gpio/Gpio.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3398	     76	    260	   3734	    e96	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+02:01:33 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3398	     76	    260	   3734	    e96	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 

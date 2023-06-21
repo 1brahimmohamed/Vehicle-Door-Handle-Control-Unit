@@ -20,12 +20,12 @@ void GPT_Init(void){
 	if(GPT_TIMER == TIM5)
 		RCC->APB1ENR |= RCC_APB1ENR_TIM5EN;
 
-	TIM_TypeDef *TIMx = GPT_TIMER; // Declare the TIMx pointer
+	// TIMx pointer
+	TIM_TypeDef *TIMx = GPT_TIMER;
 
-	// Configure the GPT timer
-	TIMx->PSC = GPT_PRESCALER; // Set the prescaler value (0 for no prescaling)
+	// pre-scaler value
+	TIMx->PSC = GPT_PRESCALER;
 
-	// Configure the GPT control register
 	TIMx->EGR |= 1<<0;
 }
 
@@ -33,13 +33,13 @@ void GPT_StartTimer(uint32 OverFlowTicks)
 {
     TIM_TypeDef *TIMx = GPT_TIMER;
 
-    // clear the counter register
+    // clear counter register
     TIMx->CNT = 0;
 
-    // Set the number of ticks before timer overflow
+    // ticks before timer overflow
     TIMx->ARR = OverFlowTicks;
 
-    // Start the timer
+    // Start timer
     TIMx->CR1 |= TIM_CR1_CEN;
 }
 
@@ -47,10 +47,10 @@ uint8 GPT_CheckTimeIsElapsed(void)
 {
     TIM_TypeDef *TIMx = GPT_TIMER;
 
-    // Check if an overflow occurred
+    // Check if we reached th time
     if (TIMx->CNT == TIMx->ARR - 1)
     {
-        // Clear the overflow flag
+        // Clear overflow flag
         TIMx->SR &= ~TIM_SR_UIF;
         return 1; // Overflow occurred
     }
@@ -72,7 +72,7 @@ uint32 GPT_GetElapsedTime(void)
     }
     else
     {
-        elapsedTicks = TIMx->CNT; // Calculate elapsed ticks
+        elapsedTicks = TIMx->CNT; // elapsed ticks
     }
 
     return elapsedTicks;

@@ -10,6 +10,10 @@
 
 #include "Std_Types.h"
 
+
+/**	----------------------  Enums ---------------------- **/
+
+
 enum doorLockingState{
     DOOR_LOCKED,
     DOOR_UNLOCKED
@@ -20,6 +24,35 @@ enum vehicleState{
     CLOSED
 };
 
+enum cases {
+	case0,
+	case1,
+	case2,
+	case3,
+	case4,
+};
+
+/**	----------------------  Defines ---------------------- **/
+
+
+#define LOCK_UNLOCK_BTN 			GPIO_PIN_0
+#define OPEN_CLOSE_BTN 				GPIO_PIN_3
+
+
+/* LED PORTS */
+#define DOOR_LOCK_LED_PORT      	GPIO_PORT_B
+#define DOOR_UNLOCK_LED_PORT    	GPIO_PORT_B
+#define HAZARD_LED_PORT         	GPIO_PORT_B
+#define AMBIENT_LIGHT_LED_PORT  	GPIO_PORT_B
+
+/* LED PINS */
+#define DOOR_LOCK_LED_PIN       	GPIO_PIN_0
+#define HAZARD_LED_PIN          	GPIO_PIN_10
+#define AMBIENT_LIGHT_LED_PIN   	GPIO_PIN_5
+
+/* TIME VALUES in millisecond */
+#define BLINK_DELAY_TICKS    		500
+#define AMBIENT_LIGHT_DELAY_TICKS 	2000
 
 
 /**	----------------------  Functions ---------------------- **/
@@ -28,7 +61,7 @@ void unlockDoor(enum doorLockingState *LockingState);
 void lockDoor(enum doorLockingState *LockingState);
 void openDoor(enum vehicleState *vehicleState);
 void closeDoor(enum vehicleState *vehicleState);
-
+void antiTheft(enum doorLockingState *doorLockingState);
 void blinkHazardLights(void);
 
 
