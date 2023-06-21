@@ -7,8 +7,8 @@
 
 #include "helpers.h"
 #include "Rcc.h"
-#include "Gpio.h"
 
+#include "Gpio.h"
 #define LOCK_LED 0
 #define AMBIENT_LED 5
 #define HAZARD_LED 10
@@ -36,8 +36,8 @@ int main(void){
 
 
 	/*set push buttons as inputs*/
-	Gpio_ConfigPin(GPIO_PORT_A, LOCK_UNLOCK_BTN, GPIO_INPUT, GPIO_PULLUP);
-	Gpio_ConfigPin(GPIO_PORT_A, OPEN_CLOSE_BTN, GPIO_INPUT, GPIO_PULLUP);
+	Gpio_ConfigPin(GPIO_PORT_A, LOCK_UNLOCK_BTN, GPIO_INPUT, GPIO_PULL_UP);
+	Gpio_ConfigPin(GPIO_PORT_A, OPEN_CLOSE_BTN, GPIO_INPUT, GPIO_PULL_UP);
 
 	/*default state all LEDS are off and door is locked & closed*/
 	Gpio_WritePin(GPIO_PORT_B, LOCK_LED, LOW);
@@ -47,18 +47,21 @@ int main(void){
 	*doorLockingState = DOOR_LOCKED;
 	*vehicleState = CLOSED;
 
-	//enable exti and system config
-	//initialize exti lines -->buttons
+
+	while(1)
+	{
 
 
-	while(1){
+		//if door is closed and unlocked no btns pressed for more then 10 s-->  lock (antitheft lock)
 
+		if(GPIO_ReadPinState(GPIO_PORT_A, OPEN_CLOSE_BTN)){
 
-	//if door is closed and unlocked no btns pressed for more then 10 s-->  lock (antitheft lock)
+		}
 
+		if(GPIO_ReadPinState(GPIO_PORT_A, LOCK_UNLOCK_BTN)){
+
+		}
 
 	}
-
-
 	return 0;
 }

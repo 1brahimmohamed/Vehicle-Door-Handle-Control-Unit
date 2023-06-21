@@ -176,8 +176,6 @@ Discarded input sections
  .text          0x00000000        0x0 ./Gpio/Gpio.o
  .data          0x00000000        0x0 ./Gpio/Gpio.o
  .bss           0x00000000        0x0 ./Gpio/Gpio.o
- .text.Gpio_ReadPin
-                0x00000000       0xb4 ./Gpio/Gpio.o
  .text          0x00000000        0x0 c:/tools/arm-none-eabi-10-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
  .data          0x00000000        0x0 c:/tools/arm-none-eabi-10-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
  .bss           0x00000000        0x0 c:/tools/arm-none-eabi-10-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
@@ -248,7 +246,7 @@ END GROUP
                 0x2000fc00                __Main_Stack_Limit = (__stack - __Main_Stack_Size)
                 [!provide]                PROVIDE (_Main_Stack_Limit = __Main_Stack_Limit)
                 0x00000100                _Minimum_Stack_Size = 0x100
-                0x20000018                PROVIDE (_Heap_Begin = _end_noinit)
+                0x20000030                PROVIDE (_Heap_Begin = _end_noinit)
                 0x2000fc00                PROVIDE (_Heap_Limit = (__stack - __Main_Stack_Size))
 
 .isr_vector     0x08000000      0x3b2
@@ -340,16 +338,16 @@ END GROUP
 
 .inits          0x080003b4       0x28
                 0x080003b4                __data_regions_array_start = .
-                0x080003b4        0x4 LONG 0x8000b54 LOADADDR (.data)
+                0x080003b4        0x4 LONG 0x80008f4 LOADADDR (.data)
                 0x080003b8        0x4 LONG 0x20000000 ADDR (.data)
-                0x080003bc        0x4 LONG 0x2000000c (ADDR (.data) + SIZEOF (.data))
-                0x080003c0        0x4 LONG 0x8000b54 LOADADDR (.data_CCMRAM)
+                0x080003bc        0x4 LONG 0x20000024 (ADDR (.data) + SIZEOF (.data))
+                0x080003c0        0x4 LONG 0x80008f4 LOADADDR (.data_CCMRAM)
                 0x080003c4        0x4 LONG 0x10000000 ADDR (.data_CCMRAM)
                 0x080003c8        0x4 LONG 0x10000000 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x080003cc                __data_regions_array_end = .
                 0x080003cc                __bss_regions_array_start = .
-                0x080003cc        0x4 LONG 0x2000000c ADDR (.bss)
-                0x080003d0        0x4 LONG 0x20000018 (ADDR (.bss) + SIZEOF (.bss))
+                0x080003cc        0x4 LONG 0x20000024 ADDR (.bss)
+                0x080003d0        0x4 LONG 0x20000030 (ADDR (.bss) + SIZEOF (.bss))
                 0x080003d4        0x4 LONG 0x10000000 ADDR (.bss_CCMRAM)
                 0x080003d8        0x4 LONG 0x10000000 (ADDR (.bss_CCMRAM) + SIZEOF (.bss_CCMRAM))
                 0x080003dc                __bss_regions_array_end = .
@@ -375,7 +373,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x080003dc      0x778
+.text           0x080003dc      0x518
  *(.text .text.*)
  .text._exit    0x080003dc        0xc ./system/src/newlib/exit.o
                 0x080003dc                _exit
@@ -399,62 +397,68 @@ END GROUP
  .text.SystemCoreClockUpdate
                 0x08000480      0x100 ./system/src/cmsis/system_stm32f4xx.o
                 0x08000480                SystemCoreClockUpdate
- .text.main     0x08000580       0x88 ./src/main.o
+ .text.main     0x08000580       0xb8 ./src/main.o
                 0x08000580                main
  .text.Rcc_Init
-                0x08000608       0x1c ./Rcc/Rcc.o
-                0x08000608                Rcc_Init
+                0x08000638       0x1c ./Rcc/Rcc.o
+                0x08000638                Rcc_Init
  .text.Rcc_Enable
-                0x08000624       0xa8 ./Rcc/Rcc.o
-                0x08000624                Rcc_Enable
+                0x08000654       0xa8 ./Rcc/Rcc.o
+                0x08000654                Rcc_Enable
  .text.Gpio_ConfigPin
-                0x080006cc      0x2dc ./Gpio/Gpio.o
-                0x080006cc                Gpio_ConfigPin
+                0x080006fc       0xc4 ./Gpio/Gpio.o
+                0x080006fc                Gpio_ConfigPin
  .text.Gpio_WritePin
-                0x080009a8      0x19c ./Gpio/Gpio.o
-                0x080009a8                Gpio_WritePin
+                0x080007c0       0x58 ./Gpio/Gpio.o
+                0x080007c0                Gpio_WritePin
+ .text.Gpio_ReadPin
+                0x08000818       0x4c ./Gpio/Gpio.o
+                0x08000818                Gpio_ReadPin
+ .text.GPIO_ReadPinState
+                0x08000864       0x80 ./Gpio/Gpio.o
+                0x08000864                GPIO_ReadPinState
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.AHBPrescTable
-                0x08000b44       0x10 ./system/src/cmsis/system_stm32f4xx.o
-                0x08000b44                AHBPrescTable
+                0x080008e4       0x10 ./system/src/cmsis/system_stm32f4xx.o
+                0x080008e4                AHBPrescTable
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
- .glue_7        0x08000b54        0x0 linker stubs
+ .glue_7        0x080008f4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000b54        0x0 linker stubs
+ .glue_7t       0x080008f4        0x0 linker stubs
 
-.vfp11_veneer   0x08000b54        0x0
- .vfp11_veneer  0x08000b54        0x0 linker stubs
+.vfp11_veneer   0x080008f4        0x0
+ .vfp11_veneer  0x080008f4        0x0 linker stubs
 
-.v4_bx          0x08000b54        0x0
- .v4_bx         0x08000b54        0x0 linker stubs
+.v4_bx          0x080008f4        0x0
+ .v4_bx         0x080008f4        0x0 linker stubs
 
-.iplt           0x08000b54        0x0
- .iplt          0x08000b54        0x0 ./system/src/newlib/exit.o
+.iplt           0x080008f4        0x0
+ .iplt          0x080008f4        0x0 ./system/src/newlib/exit.o
 
-.rel.dyn        0x08000b54        0x0
- .rel.iplt      0x08000b54        0x0 ./system/src/newlib/exit.o
+.rel.dyn        0x080008f4        0x0
+ .rel.iplt      0x080008f4        0x0 ./system/src/newlib/exit.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000b54                . = ALIGN (0x4)
-                0x08000b54                __exidx_start = .
+                0x080008f4                . = ALIGN (0x4)
+                0x080008f4                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08000b54                __exidx_end = .
-                0x08000b54                . = ALIGN (0x4)
-                0x08000b54                _etext = .
-                0x08000b54                __etext = .
+                0x080008f4                __exidx_end = .
+                0x080008f4                . = ALIGN (0x4)
+                0x080008f4                _etext = .
+                0x080008f4                __etext = .
 
-.data_CCMRAM    0x10000000        0x0 load address 0x08000b54
+.data_CCMRAM    0x10000000        0x0 load address 0x080008f4
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x10000000                . = ALIGN (0x4)
-                0x08000b54                _sidata = LOADADDR (.data)
+                0x080008f4                _sidata = LOADADDR (.data)
 
-.data           0x20000000        0xc load address 0x08000b54
+.data           0x20000000       0x24 load address 0x080008f4
  FILL mask 0xff
                 0x20000000                _sdata = .
                 0x20000000                __data_start__ = .
@@ -464,52 +468,58 @@ END GROUP
  .data.SystemCoreClock
                 0x20000008        0x4 ./system/src/cmsis/system_stm32f4xx.o
                 0x20000008                SystemCoreClock
+ .data.GPIO_Addresses
+                0x2000000c       0x14 ./Gpio/Gpio.o
+                0x2000000c                GPIO_Addresses
+ .data.oldState.0
+                0x20000020        0x1 ./Gpio/Gpio.o
  *(.data_end .data_end.*)
-                0x2000000c                . = ALIGN (0x4)
-                0x2000000c                _edata = .
-                0x2000000c                __data_end__ = .
+                0x20000024                . = ALIGN (0x4)
+ *fill*         0x20000021        0x3 ff
+                0x20000024                _edata = .
+                0x20000024                __data_end__ = .
 
-.igot.plt       0x2000000c        0x0 load address 0x08000b60
- .igot.plt      0x2000000c        0x0 ./system/src/newlib/exit.o
+.igot.plt       0x20000024        0x0 load address 0x08000918
+ .igot.plt      0x20000024        0x0 ./system/src/newlib/exit.o
 
 .bss_CCMRAM     0x10000000        0x0
  *(.bss.CCMRAM .bss.CCMRAM.*)
 
-.bss            0x2000000c        0xc
-                0x2000000c                __bss_start__ = .
-                0x2000000c                _sbss = .
+.bss            0x20000024        0xc
+                0x20000024                __bss_start__ = .
+                0x20000024                _sbss = .
  *(.bss_begin .bss_begin.*)
  *(.bss .bss.*)
- .bss.name.0    0x2000000c        0x1 ./system/src/newlib/syscalls.o
- *fill*         0x2000000d        0x3 
+ .bss.name.0    0x20000024        0x1 ./system/src/newlib/syscalls.o
+ *fill*         0x20000025        0x3 
  .bss.doorLockingState
-                0x20000010        0x4 ./src/main.o
-                0x20000010                doorLockingState
+                0x20000028        0x4 ./src/main.o
+                0x20000028                doorLockingState
  .bss.vehicleState
-                0x20000014        0x4 ./src/main.o
-                0x20000014                vehicleState
+                0x2000002c        0x4 ./src/main.o
+                0x2000002c                vehicleState
  *(COMMON)
  *(.bss_end .bss_end.*)
-                0x20000018                . = ALIGN (0x4)
-                0x20000018                __bss_end__ = .
-                0x20000018                _ebss = .
+                0x20000030                . = ALIGN (0x4)
+                0x20000030                __bss_end__ = .
+                0x20000030                _ebss = .
 
 .noinit_CCMRAM
  *(.noinit.CCMRAM .noinit.CCMRAM.*)
 
-.noinit         0x20000018        0x0
-                0x20000018                _noinit = .
+.noinit         0x20000030        0x0
+                0x20000030                _noinit = .
  *(.noinit .noinit.*)
-                0x20000018                . = ALIGN (0x4)
-                0x20000018                _end_noinit = .
+                0x20000030                . = ALIGN (0x4)
+                0x20000030                _end_noinit = .
                 [!provide]                PROVIDE (end = _end_noinit)
                 [!provide]                PROVIDE (_end = _end_noinit)
                 [!provide]                PROVIDE (__end = _end_noinit)
                 [!provide]                PROVIDE (__end__ = _end_noinit)
 
-._check_stack   0x20000018      0x100
-                0x20000118                . = (. + _Minimum_Stack_Size)
- *fill*         0x20000018      0x100 
+._check_stack   0x20000030      0x100
+                0x20000130                . = (. + _Minimum_Stack_Size)
+ *fill*         0x20000030      0x100 
 
 .b1text
  *(.b1text)
@@ -606,7 +616,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x230
+.debug_aranges  0x00000000      0x238
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x28 ./system/src/newlib/exit.o
@@ -629,12 +639,12 @@ END GROUP
  .debug_aranges
                 0x000001d0       0x30 ./Rcc/Rcc.o
  .debug_aranges
-                0x00000200       0x30 ./Gpio/Gpio.o
+                0x00000200       0x38 ./Gpio/Gpio.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1793
+.debug_info     0x00000000     0x195f
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0xd5 ./system/src/newlib/exit.o
  .debug_info    0x000000d5      0x3fc ./system/src/newlib/startup.o
@@ -646,9 +656,9 @@ END GROUP
  .debug_info    0x0000132d       0xca ./system/src/cmsis/vectors_stm32f401xe.o
  .debug_info    0x000013f7      0x10f ./src/main.o
  .debug_info    0x00001506      0x12a ./Rcc/Rcc.o
- .debug_info    0x00001630      0x163 ./Gpio/Gpio.o
+ .debug_info    0x00001630      0x32f ./Gpio/Gpio.o
 
-.debug_abbrev   0x00000000      0x8eb
+.debug_abbrev   0x00000000      0x984
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0xab ./system/src/newlib/exit.o
  .debug_abbrev  0x000000ab      0x15c ./system/src/newlib/startup.o
@@ -660,9 +670,9 @@ END GROUP
  .debug_abbrev  0x000006ac       0xa2 ./system/src/cmsis/vectors_stm32f401xe.o
  .debug_abbrev  0x0000074e       0x8f ./src/main.o
  .debug_abbrev  0x000007dd       0x86 ./Rcc/Rcc.o
- .debug_abbrev  0x00000863       0x88 ./Gpio/Gpio.o
+ .debug_abbrev  0x00000863      0x121 ./Gpio/Gpio.o
 
-.debug_line     0x00000000      0xf3d
+.debug_line     0x00000000      0xdbd
  *(.debug_line)
  .debug_line    0x00000000      0x113 ./system/src/newlib/exit.o
  .debug_line    0x00000113      0x235 ./system/src/newlib/startup.o
@@ -672,11 +682,11 @@ END GROUP
  .debug_line    0x000006f3      0x131 ./system/src/cortexm/reset-hardware.o
  .debug_line    0x00000824      0x193 ./system/src/cmsis/system_stm32f4xx.o
  .debug_line    0x000009b7       0x63 ./system/src/cmsis/vectors_stm32f401xe.o
- .debug_line    0x00000a1a       0xfe ./src/main.o
- .debug_line    0x00000b18       0xe8 ./Rcc/Rcc.o
- .debug_line    0x00000c00      0x33d ./Gpio/Gpio.o
+ .debug_line    0x00000a1a      0x10e ./src/main.o
+ .debug_line    0x00000b28       0xe8 ./Rcc/Rcc.o
+ .debug_line    0x00000c10      0x1ad ./Gpio/Gpio.o
 
-.debug_frame    0x00000000      0x518
+.debug_frame    0x00000000      0x53c
  *(.debug_frame)
  .debug_frame   0x00000000       0x50 ./system/src/newlib/exit.o
  .debug_frame   0x00000050       0xc8 ./system/src/newlib/startup.o
@@ -688,9 +698,9 @@ END GROUP
  .debug_frame   0x000003b8       0x28 ./system/src/cmsis/vectors_stm32f401xe.o
  .debug_frame   0x000003e0       0x2c ./src/main.o
  .debug_frame   0x0000040c       0x80 ./Rcc/Rcc.o
- .debug_frame   0x0000048c       0x8c ./Gpio/Gpio.o
+ .debug_frame   0x0000048c       0xb0 ./Gpio/Gpio.o
 
-.debug_str      0x00000000      0x8d8
+.debug_str      0x00000000      0x9b1
  *(.debug_str)
  .debug_str     0x00000000      0x197 ./system/src/newlib/exit.o
                                 0x1d0 (size before relaxing)
@@ -712,8 +722,8 @@ END GROUP
                                 0x1fb (size before relaxing)
  .debug_str     0x0000080f       0x5d ./Rcc/Rcc.o
                                 0x1ff (size before relaxing)
- .debug_str     0x0000086c       0x6c ./Gpio/Gpio.o
-                                0x200 (size before relaxing)
+ .debug_str     0x0000086c      0x145 ./Gpio/Gpio.o
+                                0x2eb (size before relaxing)
 
 .debug_loc
  *(.debug_loc)
@@ -735,7 +745,7 @@ END GROUP
 OUTPUT(DoorHandle.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_ranges   0x00000000      0x180
+.debug_ranges   0x00000000      0x188
  .debug_ranges  0x00000000       0x18 ./system/src/newlib/exit.o
  .debug_ranges  0x00000018       0x30 ./system/src/newlib/startup.o
  .debug_ranges  0x00000048       0x20 ./system/src/newlib/syscalls.o
@@ -746,4 +756,4 @@ LOAD linker stubs
  .debug_ranges  0x00000120       0x10 ./system/src/cmsis/vectors_stm32f401xe.o
  .debug_ranges  0x00000130       0x10 ./src/main.o
  .debug_ranges  0x00000140       0x20 ./Rcc/Rcc.o
- .debug_ranges  0x00000160       0x20 ./Gpio/Gpio.o
+ .debug_ranges  0x00000160       0x28 ./Gpio/Gpio.o

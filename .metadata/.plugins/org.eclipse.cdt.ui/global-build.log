@@ -548,3 +548,237 @@ arm-none-eabi-size --format=berkeley "DoorHandle.elf"
    2858	     52	    268	   3178	    c6a	DoorHandle.elf
 Finished building: DoorHandle.siz
  
+18:27:41 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2858	     52	    268	   3178	    c6a	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+19:03:36 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/helpers.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/helpers.d" -MT"src/helpers.o" -c -o "src/helpers.o" "../src/helpers.c"
+Finished building: ../src/helpers.c
+ 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:39:59: error: 'GPIO_PULLUP' undeclared (first use in this function); did you mean 'GPIO_PULL_UP'?
+   39 |  Gpio_ConfigPin(GPIO_PORT_A, LOCK_UNLOCK_BTN, GPIO_INPUT, GPIO_PULLUP);
+      |                                                           ^~~~~~~~~~~
+      |                                                           GPIO_PULL_UP
+../src/main.c:39:59: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:54:3: error: 'Gpio' undeclared (first use in this function)
+   54 |   Gpio
+      |   ^~~~
+../src/main.c:54:7: error: expected ';' before 'if'
+   54 |   Gpio
+      |       ^
+      |       ;
+......
+   57 |   if(Gpio)
+      |   ~~   
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:03:42 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:39:59: error: 'GPIO_PULLUP' undeclared (first use in this function); did you mean 'GPIO_PULL_UP'?
+   39 |  Gpio_ConfigPin(GPIO_PORT_A, LOCK_UNLOCK_BTN, GPIO_INPUT, GPIO_PULLUP);
+      |                                                           ^~~~~~~~~~~
+      |                                                           GPIO_PULL_UP
+../src/main.c:39:59: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:57:6: error: 'Gpio' undeclared (first use in this function)
+   57 |   if(Gpio)
+      |      ^~~~
+../src/main.c:60:2: error: expected expression before '}' token
+   60 |  }
+      |  ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:03:52 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:39:59: error: 'GPIO_PULLUP' undeclared (first use in this function); did you mean 'GPIO_PULL_UP'?
+   39 |  Gpio_ConfigPin(GPIO_PORT_A, LOCK_UNLOCK_BTN, GPIO_INPUT, GPIO_PULLUP);
+      |                                                           ^~~~~~~~~~~
+      |                                                           GPIO_PULL_UP
+../src/main.c:39:59: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:04:29 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:39:59: error: 'GPIO_PULLUP' undeclared (first use in this function); did you mean 'GPIO_PULL_UP'?
+   39 |  Gpio_ConfigPin(GPIO_PORT_A, LOCK_UNLOCK_BTN, GPIO_INPUT, GPIO_PULLUP);
+      |                                                           ^~~~~~~~~~~
+      |                                                           GPIO_PULL_UP
+../src/main.c:39:59: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:05:09 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../Gpio/Gpio.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"Gpio/Gpio.d" -MT"Gpio/Gpio.o" -c -o "Gpio/Gpio.o" "../Gpio/Gpio.c"
+../Gpio/Gpio.c: In function 'Gpio_ConfigPin':
+../Gpio/Gpio.c:20:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   20 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_WritePin':
+../Gpio/Gpio.c:37:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   37 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+../Gpio/Gpio.c: In function 'Gpio_ReadPin':
+../Gpio/Gpio.c:45:24: warning: initialization of 'GpioType *' from 'uint32' {aka 'long unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+   45 |  GpioType * gpioReg =  GPIO_Addresses[PortId];
+      |                        ^~~~~~~~~~~~~~
+Finished building: ../Gpio/Gpio.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1998	     72	    268	   2338	    922	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+19:05:57 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1998	     72	    268	   2338	    922	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+19:07:22 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c:67:2: error: expected identifier or '(' before 'return'
+   67 |  return 0;
+      |  ^~~~~~
+../src/main.c:68:1: error: expected identifier or '(' before '}' token
+   68 | }
+      | ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:07:31 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c:66:2: error: expected identifier or '(' before 'return'
+   66 |  return 0;
+      |  ^~~~~~
+../src/main.c:67:1: error: expected identifier or '(' before '}' token
+   67 | }
+      | ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:07:54 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:67:1: error: expected declaration or statement at end of input
+   67 | }
+      | ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:08:15 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:65:1: error: expected declaration or statement at end of input
+   65 | }
+      | ^
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:08:33 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2250	     76	    268	   2594	    a22	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 
+19:08:36 **** Incremental Build of configuration Release for project DoorHandle ****
+make all 
+Building file: ../src/main.c
+Invoking: GNU Arm Cross C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -DNDEBUG -DSTM32F401xE -DHSE_VALUE=8000000 -I"../include" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpt" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Gpio" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Lib" -I"D:\My PC\Projects\Embedded\Valeo\Final Project\DoorHandle\Rcc" -I"../system/include" -I"../system/include/cmsis" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: DoorHandle.elf
+Invoking: GNU Arm Cross C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -Wall -Wextra -g -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"DoorHandle.map" --specs=nano.specs -o "DoorHandle.elf" ./system/src/newlib/assert.o ./system/src/newlib/cxx.o ./system/src/newlib/exit.o ./system/src/newlib/sbrk.o ./system/src/newlib/startup.o ./system/src/newlib/syscalls.o  ./system/src/diag/trace-impl.o ./system/src/diag/trace.o  ./system/src/cortexm/exception-handlers.o ./system/src/cortexm/initialize-hardware.o ./system/src/cortexm/reset-hardware.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xe.o  ./src/helpers.o ./src/main.o  ./Rcc/Rcc.o  ./Gpt/Gpt.o  ./Gpio/Gpio.o   
+Finished building target: DoorHandle.elf
+ 
+Invoking: GNU Arm Cross Create Flash Image
+arm-none-eabi-objcopy -O ihex "DoorHandle.elf"  "DoorHandle.hex"
+Finished building: DoorHandle.hex
+ 
+Invoking: GNU Arm Cross Print Size
+arm-none-eabi-size --format=berkeley "DoorHandle.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2250	     76	    268	   2594	    a22	DoorHandle.elf
+Finished building: DoorHandle.siz
+ 

@@ -6,184 +6,68 @@
  */
 
 #include "Gpio.h"
+
 #include "Gpio_Private.h"
 
-#include "Utils.h"
+uint32 GPIO_Addresses[5] = { 0x40020000, 0x40020400 , 0x40020800, 0x40020C00, 0x40021000 };
+
+#define GPIO_REG(REG_ID, PORT_ID) ((uint32*)((PORT_ID) + (REG_ID)))
 
 void Gpio_ConfigPin(uint8 PortName, uint8 PinNum, uint8 PinMode,
 		uint8 DefaultState) {
-	switch (PortName) {
-	case GPIO_PORT_A:
-	{
-		GPIOA_MODER &= ~(0x03 << (PinNum * 2));
-		GPIOA_MODER |= (PinMode << (PinNum * 2));
 
-		switch(PinMode){
-		case GPIO_INPUT:
-		{
-			GPIOA_PUPDR &= ~(0x03 << (PinNum * 2));
-			GPIOA_PUPDR |= (DefaultState << (PinNum * 2));
-			break;
-		}
-		case GPIO_OUTPUT:
-		{
-			GPIOA_OTYPER &= ~(0x01 << PinNum);
-			GPIOA_OTYPER |= (DefaultState << PinNum);
-			break;
-		}
-		}
-		break;
-	}
+	uint8 PortId = PortName - GPIO_PORT_A;
+	GpioType * gpioReg =  GPIO_Addresses[PortId];
 
-	case GPIO_PORT_B:
-	{
-		GPIOB_MODER &= ~(0x03 << (PinNum * 2));
-		GPIOB_MODER |= (PinMode << (PinNum * 2));
+	uint8 OutputState = DefaultState & 0x1;
+	uint8 InputState = DefaultState >> 1;
 
-		switch(PinMode){
-		case GPIO_INPUT:
-		{
-			GPIOB_PUPDR &= ~(0x03 << (PinNum * 2) );
-			GPIOB_PUPDR |= (DefaultState << (PinNum * 2));
-			break;
-		}
-		case GPIO_OUTPUT:
-		{
-			GPIOB_OTYPER &= ~(0x01 << PinNum);
-			GPIOB_OTYPER |= (DefaultState << PinNum);
-			break;
-		}
-		}
-		break;
-	}
+	gpioReg->GPIO_MODER &= ~(0x3 << (2 * PinNum));
+	gpioReg->GPIO_MODER |= (PinMode << (2 * PinNum));
 
-	case GPIO_PORT_C:
-	{
-		GPIOC_MODER &= ~(0x03 << (PinNum * 2));
-		GPIOC_MODER |= (PinMode << (PinNum * 2));
+	gpioReg->GPIO_OTYPER  &= ~(0x01 << PinNum);
+	gpioReg->GPIO_OTYPER |= (OutputState << PinNum);
 
-		switch(PinMode){
-		case GPIO_INPUT:
-		{
-			GPIOC_PUPDR &= ~(0x03 << (PinNum * 2));
-			GPIOC_PUPDR |= (DefaultState << (PinNum * 2));
-			break;
-		}
-		case GPIO_OUTPUT:
-		{
-			GPIOC_OTYPER &= ~(0x01 << PinNum);
-			GPIOC_OTYPER |= (DefaultState << PinNum);
-			break;
-		}
-		}
-		break;
-	}
-
-	case GPIO_PORT_D:
-	{
-		GPIOD_MODER &= ~(0x03 << (PinNum * 2));
-		GPIOD_MODER |= (PinMode << (PinNum * 2));
-
-		switch(PinMode){
-		case GPIO_INPUT:
-		{
-			GPIOD_PUPDR &= ~(0x03 << (PinNum * 2) );
-			GPIOD_PUPDR |= (DefaultState << (PinNum*2));
-			break;
-		}
-		case GPIO_OUTPUT:
-		{
-			GPIOD_OTYPER &= ~(0x01 << PinNum);
-			GPIOD_OTYPER |= (DefaultState << PinNum);
-			break;
-		}
-		}
-		break;
-	}
-
-	default:
-		break;
-	}
+	gpioReg->GPIO_PUPDR &= ~(0x3 << (2 * PinNum));
+	gpioReg->GPIO_PUPDR |= (InputState << (2*PinNum));
 }
 
-uint8 Gpio_WritePin(uint8 PortName, uint8 PinNum, uint8 Data) {
-
-	switch (PortName) {
-		case GPIO_PORT_A:
-		{
-			if((GPIOA_MODER & (0x03 << PinNum * 2)) >> (PinNum * 2)== GPIO_OUTPUT){
-				GPIOA_ODR &= ~(0x1 << PinNum);
-				GPIOA_ODR |= (Data << PinNum);
-				return OK;
-			}
-			else
-				return NOK;
-
-			break;
-		}
-
-
-		case GPIO_PORT_B:
-			if((GPIOB_MODER & (0x03 << PinNum * 2)) >> (PinNum * 2)== GPIO_OUTPUT){
-						GPIOB_ODR &= ~(0x1 << PinNum);
-						GPIOB_ODR |= (Data << PinNum);
-						return OK;
-					}
-					else
-						return NOK;
-			break;
-
-		case GPIO_PORT_C:
-			if((GPIOC_MODER & (0x03 << PinNum * 2)) >> (PinNum * 2)== GPIO_OUTPUT){
-						GPIOC_ODR &= ~(0x1 << PinNum);
-						GPIOC_ODR |= (Data << PinNum);
-						return OK;
-					}
-					else
-						return NOK;
-			break;
-
-		case GPIO_PORT_D:
-			if((GPIOD_MODER & (0x03 << PinNum * 2)) >> (PinNum * 2)== GPIO_OUTPUT){
-						GPIOD_ODR &= ~(0x1 << PinNum);
-						GPIOD_ODR |= (Data << PinNum);
-						return OK;
-					}
-					else
-						return NOK;
-			break;
-
-		default:
-			break;
-		}
-
-	return NOK;
+void Gpio_WritePin(uint8 PortName, uint8 PinNum, uint8 Data) {
+	uint8 PortId = PortName - GPIO_PORT_A;
+	GpioType * gpioReg =  GPIO_Addresses[PortId];
+	gpioReg->GPIO_ODR &= ~(0x01 << PinNum);
+	gpioReg->GPIO_ODR |= (Data << PinNum);
 }
 
-uint8 Gpio_ReadPin(uint8 PortName, uint8 PinNum){
-	uint8 pinValue;
-
-	switch (PortName) {
-		    case GPIO_PORT_A:
-		    	pinValue = (GPIOA_IDR & (1 << PinNum)) >> (PinNum);
-		    	break;
-
-		    case GPIO_PORT_B:
-		    	pinValue = (GPIOB_IDR & (1 << PinNum)) >> (PinNum);
-		    	break;
-
-		    case GPIO_PORT_C:
-		    	pinValue = (GPIOC_IDR & (1 << PinNum)) >> (PinNum);
-		    	break;
-
-		    case GPIO_PORT_D:
-		    	pinValue = (GPIOD_IDR & (1 << PinNum)) >> (PinNum);
-		    	break;
-
-		    default:
-		    	pinValue = 0;
-		    	break;
-		  }
-
-	return pinValue;
+uint8 Gpio_ReadPin(uint8 PortName, uint8 PinNum) {
+	uint8 data = 0;
+	uint8 PortId = PortName - GPIO_PORT_A;
+	GpioType * gpioReg =  GPIO_Addresses[PortId];
+	data = (gpioReg->GPIO_IDR & (1 << PinNum)) >> PinNum;
+	return data;
 }
+
+uint8 GPIO_ReadPinState(uint8 PortName, uint8 PinNum)
+{
+	static uint8 oldState = 1;
+	uint8 data1, data2, currentState;
+	uint16 i;
+
+	data1 = Gpio_ReadPin(PortName, PinNum);
+	for(i = 0; i < 10000; i++);
+	data2 = Gpio_ReadPin(PortName, PinNum);
+
+	if (data1 == data2)
+		currentState = data1;
+
+
+	if (currentState == 0 && oldState == 1){
+		oldState = currentState;
+		return 1;
+	}
+
+	oldState = currentState;
+
+	return 0;
+}
+
