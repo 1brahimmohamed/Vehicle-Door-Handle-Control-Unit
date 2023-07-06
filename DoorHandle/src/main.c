@@ -53,38 +53,45 @@ int main(void){
 
 		/* check if btn is pressed */
 
-		if(GPIO_ReadPinState(GPIO_PORT_A, OPEN_CLOSE_BTN))
-		{
-			if( (doorLockingState == DOOR_UNLOCKED) && (vehicleState == OPENED))
-			{
-				scenario = case2;
-			}
-
-			/* if door is opened and unlocked -->  close */
-			else if((doorLockingState==DOOR_UNLOCKED)&&(vehicleState == CLOSED))
-			{
-				scenario = case3;
-			}
-
-			GPT_StartTimer(13000);
-		}
 
 		if(GPIO_ReadPinState(GPIO_PORT_A, LOCK_UNLOCK_BTN))
 		{
 
 			if( (doorLockingState == DOOR_LOCKED) && (vehicleState == CLOSED) )
 			{
+				/*unlock the door*/
 				scenario = case0;
 			}
 
 			else if( (doorLockingState==DOOR_UNLOCKED) && (vehicleState == CLOSED) )
 			{
+				/*lock the door*/
 				scenario = case1;
 			}
-
+			/*restart timer as a button is pressed*/
 			GPT_StartTimer(13000);
 
 		}
+
+		if(GPIO_ReadPinState(GPIO_PORT_A, OPEN_CLOSE_BTN))
+		{
+			if( (doorLockingState == DOOR_UNLOCKED) && (vehicleState == OPENED))
+			{
+				/*close the door*/
+				scenario = case2;
+			}
+
+			/* if door is opened and unlocked -->  close */
+			else if((doorLockingState==DOOR_UNLOCKED)&&(vehicleState == CLOSED))
+			{
+				/*open the door*/
+				scenario = case3;
+			}
+			/*restart timer as a button is pressed*/
+			GPT_StartTimer(13000);
+		}
+
+
 
 		switch(scenario){
 		case case0:
@@ -103,10 +110,11 @@ int main(void){
 			antiTheft(&doorLockingState);
 			break;
 		}
-
-
+		/* no button is pressed */
 		if( (doorLockingState==DOOR_UNLOCKED) && (vehicleState == CLOSED) ){
+			/*closed and unlocked for 10 sec*/
 			if(GPT_GetElapsedTime() > 9900){
+				/*antitheft locking*/
 				scenario = case4;
 			}
 		}
