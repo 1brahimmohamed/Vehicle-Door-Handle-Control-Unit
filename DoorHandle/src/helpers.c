@@ -15,30 +15,32 @@ void unlockDoor(enum doorLockingState *doorLockingState){
 
 	if(GPT_GetElapsedTime() > 10 && GPT_GetElapsedTime() < 50){
 
-		// unlock the door
+		/* unlock the door */ 
 		*doorLockingState = DOOR_UNLOCKED;
 
-		// turn on the door unlock LED
+		/*turn on the door lock LED*/
 		Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, HIGH);
 
-		// turn on the ambient light
+		/*turn on the ambient light*/
 		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
 
+		/*turn on the hazard light*/
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
 	}
 
-
+	/*hazard light blinking*/
+	/*wait for 0.5 sec and turn off hazard light */
 	if (GPT_GetElapsedTime() > 550 && GPT_GetElapsedTime() < 1050)
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
 
-
+	/*wait for 0.5 sec and turn on hazard light */
 	if (GPT_GetElapsedTime() > 1050 && GPT_GetElapsedTime() < 1550)
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
 
-
+	/*wait for 0.5 sec and turn off hazard light */
 	if(GPT_GetElapsedTime() > 1550 && GPT_GetElapsedTime() < 2050){
 
-		// turn off the ambient light
+		// turn off the ambient light since 2 sec passed
 		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
 
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
@@ -58,18 +60,20 @@ void lockDoor(enum doorLockingState *doorLockingState){
 
 		// turn off the ambient light
 		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
-
+		
+		// turn on the hazard light
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
 	}
+	/*hazard light blinking*/
+	/*wait for 0.5 sec and turn off hazard light */
 
 	if (GPT_GetElapsedTime() > 550 && GPT_GetElapsedTime() < 1050)
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
-
-
+	/*wait for 0.5 sec and turn on hazard light */
 	if (GPT_GetElapsedTime() > 1050 && GPT_GetElapsedTime() < 1550)
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
 
-
+	/*wait for 0.5 sec and turn off hazard light */
 	if (GPT_GetElapsedTime() > 1550 && GPT_GetElapsedTime() < 2050)
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
 
@@ -84,6 +88,7 @@ void openDoor(enum vehicleState *vehicleState)
 		// turn on the ambient light
 		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
 
+		// turn off the hazard light (to be clear when interrupting door unlocking)
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
 
 	}
@@ -104,7 +109,7 @@ void closeDoor(enum vehicleState *vehicleState)
 		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, HIGH);
 	}
 
-
+	/*wait for 1 sec and turn off ambient light */
 	if(GPT_GetElapsedTime() > 1050 && GPT_GetElapsedTime() < 1150){
 		// Turn off ambient light
 		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
@@ -118,20 +123,19 @@ void antiTheft(enum doorLockingState *doorLockingState){
 	{
 		*doorLockingState = DOOR_LOCKED;
 
-		// turn on the door unlock LED
+		// turn off the door lock LED
 		Gpio_WritePin(DOOR_LOCK_LED_PORT, DOOR_LOCK_LED_PIN, LOW);
 
-		// turn on the ambient light
+		// turn off the ambient light
 		Gpio_WritePin(AMBIENT_LIGHT_LED_PORT, AMBIENT_LIGHT_LED_PIN, LOW);
 
 		// Turn on hazards light
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);
 	}
-
+	/*hazard light blinking 2 times in 2 sec*/
 	if (GPT_GetElapsedTime() > 10550 && GPT_GetElapsedTime() < 11050){
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, LOW);
 	}
-
 
 	if (GPT_GetElapsedTime() > 11050 && GPT_GetElapsedTime() < 11550)
 		Gpio_WritePin(HAZARD_LED_PORT, HAZARD_LED_PIN, HIGH);

@@ -132,7 +132,7 @@ Discarded input sections
  .data          0x00000000        0x0 ./Gpt/Gpt.o
  .bss           0x00000000        0x0 ./Gpt/Gpt.o
  .text.GPT_GetRemainingTime
-                0x00000000       0x3a ./Gpt/Gpt.o
+                0x00000000       0x36 ./Gpt/Gpt.o
  .text          0x00000000        0x0 ./Gpio/Gpio.o
  .data          0x00000000        0x0 ./Gpio/Gpio.o
  .bss           0x00000000        0x0 ./Gpio/Gpio.o
@@ -298,10 +298,10 @@ END GROUP
 
 .inits          0x080003b4       0x28
                 0x080003b4                __data_regions_array_start = .
-                0x080003b4        0x4 LONG 0x8000d70 LOADADDR (.data)
+                0x080003b4        0x4 LONG 0x8000d58 LOADADDR (.data)
                 0x080003b8        0x4 LONG 0x20000000 ADDR (.data)
                 0x080003bc        0x4 LONG 0x20000024 (ADDR (.data) + SIZEOF (.data))
-                0x080003c0        0x4 LONG 0x8000d70 LOADADDR (.data_CCMRAM)
+                0x080003c0        0x4 LONG 0x8000d58 LOADADDR (.data_CCMRAM)
                 0x080003c4        0x4 LONG 0x10000000 ADDR (.data_CCMRAM)
                 0x080003c8        0x4 LONG 0x10000000 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x080003cc                __data_regions_array_end = .
@@ -333,7 +333,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x080003dc      0x994
+.text           0x080003dc      0x97c
  *(.text .text.*)
  .text._exit    0x080003dc        0xc ./system/src/newlib/exit.o
                 0x080003dc                _exit
@@ -381,71 +381,71 @@ END GROUP
                 0x080009fc       0xa8 ./Rcc/Rcc.o
                 0x080009fc                Rcc_Enable
  .text.GPT_Init
-                0x08000aa4       0x3c ./Gpt/Gpt.o
+                0x08000aa4       0x30 ./Gpt/Gpt.o
                 0x08000aa4                GPT_Init
  .text.GPT_StartTimer
-                0x08000ae0       0x30 ./Gpt/Gpt.o
-                0x08000ae0                GPT_StartTimer
+                0x08000ad4       0x30 ./Gpt/Gpt.o
+                0x08000ad4                GPT_StartTimer
  .text.GPT_CheckTimeIsElapsed
-                0x08000b10       0x36 ./Gpt/Gpt.o
-                0x08000b10                GPT_CheckTimeIsElapsed
+                0x08000b04       0x2a ./Gpt/Gpt.o
+                0x08000b04                GPT_CheckTimeIsElapsed
  .text.GPT_GetElapsedTime
-                0x08000b46       0x32 ./Gpt/Gpt.o
-                0x08000b46                GPT_GetElapsedTime
+                0x08000b2e       0x32 ./Gpt/Gpt.o
+                0x08000b2e                GPT_GetElapsedTime
  .text.Gpio_ConfigPin
-                0x08000b78       0xc4 ./Gpio/Gpio.o
-                0x08000b78                Gpio_ConfigPin
+                0x08000b60       0xc4 ./Gpio/Gpio.o
+                0x08000b60                Gpio_ConfigPin
  .text.Gpio_WritePin
-                0x08000c3c       0x58 ./Gpio/Gpio.o
-                0x08000c3c                Gpio_WritePin
+                0x08000c24       0x58 ./Gpio/Gpio.o
+                0x08000c24                Gpio_WritePin
  .text.Gpio_ReadPin
-                0x08000c94       0x4c ./Gpio/Gpio.o
-                0x08000c94                Gpio_ReadPin
+                0x08000c7c       0x4c ./Gpio/Gpio.o
+                0x08000c7c                Gpio_ReadPin
  .text.GPIO_ReadPinState
-                0x08000ce0       0x80 ./Gpio/Gpio.o
-                0x08000ce0                GPIO_ReadPinState
+                0x08000cc8       0x80 ./Gpio/Gpio.o
+                0x08000cc8                GPIO_ReadPinState
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.AHBPrescTable
-                0x08000d60       0x10 ./system/src/cmsis/system_stm32f4xx.o
-                0x08000d60                AHBPrescTable
+                0x08000d48       0x10 ./system/src/cmsis/system_stm32f4xx.o
+                0x08000d48                AHBPrescTable
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
- .glue_7        0x08000d70        0x0 linker stubs
+ .glue_7        0x08000d58        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000d70        0x0 linker stubs
+ .glue_7t       0x08000d58        0x0 linker stubs
 
-.vfp11_veneer   0x08000d70        0x0
- .vfp11_veneer  0x08000d70        0x0 linker stubs
+.vfp11_veneer   0x08000d58        0x0
+ .vfp11_veneer  0x08000d58        0x0 linker stubs
 
-.v4_bx          0x08000d70        0x0
- .v4_bx         0x08000d70        0x0 linker stubs
+.v4_bx          0x08000d58        0x0
+ .v4_bx         0x08000d58        0x0 linker stubs
 
-.iplt           0x08000d70        0x0
- .iplt          0x08000d70        0x0 ./system/src/newlib/exit.o
+.iplt           0x08000d58        0x0
+ .iplt          0x08000d58        0x0 ./system/src/newlib/exit.o
 
-.rel.dyn        0x08000d70        0x0
- .rel.iplt      0x08000d70        0x0 ./system/src/newlib/exit.o
+.rel.dyn        0x08000d58        0x0
+ .rel.iplt      0x08000d58        0x0 ./system/src/newlib/exit.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000d70                . = ALIGN (0x4)
-                0x08000d70                __exidx_start = .
+                0x08000d58                . = ALIGN (0x4)
+                0x08000d58                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08000d70                __exidx_end = .
-                0x08000d70                . = ALIGN (0x4)
-                0x08000d70                _etext = .
-                0x08000d70                __etext = .
+                0x08000d58                __exidx_end = .
+                0x08000d58                . = ALIGN (0x4)
+                0x08000d58                _etext = .
+                0x08000d58                __etext = .
 
-.data_CCMRAM    0x10000000        0x0 load address 0x08000d70
+.data_CCMRAM    0x10000000        0x0 load address 0x08000d58
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x10000000                . = ALIGN (0x4)
-                0x08000d70                _sidata = LOADADDR (.data)
+                0x08000d58                _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x24 load address 0x08000d70
+.data           0x20000000       0x24 load address 0x08000d58
  FILL mask 0xff
                 0x20000000                _sdata = .
                 0x20000000                __data_start__ = .
@@ -466,7 +466,7 @@ END GROUP
                 0x20000024                _edata = .
                 0x20000024                __data_end__ = .
 
-.igot.plt       0x20000024        0x0 load address 0x08000d94
+.igot.plt       0x20000024        0x0 load address 0x08000d7c
  .igot.plt      0x20000024        0x0 ./system/src/newlib/exit.o
 
 .bss_CCMRAM     0x10000000        0x0
@@ -673,7 +673,7 @@ END GROUP
  .debug_abbrev  0x000008fa      0x12f ./Gpt/Gpt.o
  .debug_abbrev  0x00000a29      0x121 ./Gpio/Gpio.o
 
-.debug_line     0x00000000     0x1215
+.debug_line     0x00000000     0x120e
  *(.debug_line)
  .debug_line    0x00000000      0x113 ./system/src/newlib/exit.o
  .debug_line    0x00000113      0x235 ./system/src/newlib/startup.o
@@ -686,10 +686,10 @@ END GROUP
  .debug_line    0x00000a1a      0x217 ./src/helpers.o
  .debug_line    0x00000c31      0x195 ./src/main.o
  .debug_line    0x00000dc6       0xe8 ./Rcc/Rcc.o
- .debug_line    0x00000eae      0x1ba ./Gpt/Gpt.o
- .debug_line    0x00001068      0x1ad ./Gpio/Gpio.o
+ .debug_line    0x00000eae      0x1b3 ./Gpt/Gpt.o
+ .debug_line    0x00001061      0x1ad ./Gpio/Gpio.o
 
-.debug_frame    0x00000000      0x6d8
+.debug_frame    0x00000000      0x6d4
  *(.debug_frame)
  .debug_frame   0x00000000       0x50 ./system/src/newlib/exit.o
  .debug_frame   0x00000050       0xc8 ./system/src/newlib/startup.o
@@ -702,8 +702,8 @@ END GROUP
  .debug_frame   0x000003e0       0xc4 ./src/helpers.o
  .debug_frame   0x000004a4       0x30 ./src/main.o
  .debug_frame   0x000004d4       0x80 ./Rcc/Rcc.o
- .debug_frame   0x00000554       0xd4 ./Gpt/Gpt.o
- .debug_frame   0x00000628       0xb0 ./Gpio/Gpio.o
+ .debug_frame   0x00000554       0xd0 ./Gpt/Gpt.o
+ .debug_frame   0x00000624       0xb0 ./Gpio/Gpio.o
 
 .debug_str      0x00000000      0xaef
  *(.debug_str)

@@ -26,7 +26,6 @@ void GPT_Init(void){
 	// pre-scaler value
 	TIMx->PSC = GPT_PRESCALER;
 
-	TIMx->EGR |= 1<<0;
 }
 
 void GPT_StartTimer(uint32 OverFlowTicks)
@@ -51,7 +50,6 @@ uint8 GPT_CheckTimeIsElapsed(void)
     if (TIMx->CNT == TIMx->ARR - 1)
     {
         // Clear overflow flag
-        TIMx->SR &= ~TIM_SR_UIF;
         return 1; // Overflow occurred
     }
     else
@@ -84,7 +82,7 @@ uint32 GPT_GetRemainingTime(void)
     unsigned long int remainingTicks = 0;
 
     // Check if an overflow occurred
-    if ((TIMx->SR & TIM_SR_UIF) != 0)
+    if (GPT_CheckTimeIsElapsed())
     {
         remainingTicks = 0; // Overflow occurred
     }
